@@ -11,13 +11,11 @@ We plan to collaborate with other groups working on the advancement of mathemati
 
 We are using a DAISY mailing list for our communications.
 
-[Accessible Math](math@daisylists.org)
+[Accessible Math math@daisylists.org](math@daisylists.org)
 
 [To sign up to the DAISY Math list discussing reading and writing accessible math, fill out this simple form.](math@daisylists.org)
 
-We are also using a SharePoint folder for sharing documents.
-
-[SharePoint Project folder](https://daisy365.sharepoint.com/:f:/s/SharedProjects/EgH9RyJlPgJNsKNf9UdWiXEBmwJcpbjlAvt19MKU-_yKIw?e=n2acMq)
+We are also using a SharePoint folder for documents. Members can request this link.
 
 ## Projects
 
