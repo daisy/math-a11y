@@ -13,7 +13,7 @@ We are using a DAISY mailing list for our communications.
 
 [Accessible Math math@daisylists.org](math@daisylists.org)
 
-[To sign up to the DAISY Math list discussing reading and writing accessible math, fill out this simple form.](math@daisylists.org)
+[To sign up to the DAISY Math list discussing reading and writing accessible math, fill out this simple form.](https://daisylists.org/postorius/lists/math.daisylists.org/)
 
 We are also using a SharePoint folder for documents. Members can request this link.
 
