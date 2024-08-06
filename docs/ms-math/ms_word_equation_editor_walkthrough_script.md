@@ -17,7 +17,6 @@ In this document, the following terms will be used:
 - **Participant**: The person using the product or system being tested.
   They provide feedback based on their experiences and interactions
   during the study.
-
 - **Moderator**: The person conducting the usability study. They guide
   the participant through the tasks, ask questions, and observe the
   participant's behavior.
@@ -34,11 +33,8 @@ As you go through the tasks, we would like you to 'think aloud' as much
 as possible. This means you should:
 
 - Describe what you are attempting to do.
-
 - State what you think the math expression is.
-
 - Explain where you think you are in the expression.
-
 - Share any thoughts or difficulties you encounter.
 
 Your verbal feedback will help us understand the challenges you face and
@@ -50,9 +46,7 @@ After completing the tasks, we would appreciate it if you could share
 your thoughts on the following:
 
 - What features did you find helpful?
-
 - What difficulties did you encounter?
-
 - What features do you think are missing or would be great to have?
 
 Your insights are invaluable in helping us improve the accessibility and
@@ -65,7 +59,6 @@ described below are designed with two goals in mind:
 
 1.  To stay within the initial scope of the project which is to focus on
     the latest desktop version of Word 365 on the Windows OS.
-
 2.  To keep AT configurations to known best practices with the goal of
     avoiding confounding factors. In other words, we want to avoid known
     issues with how AT speaks/renders mathematics in favor of
@@ -83,7 +76,6 @@ If possible, please have the participant use the latest version of
 either:
 
 - Microsoft Word 2021 (part of the Office 2021 suite)
-
 - Microsoft Word for Microsoft 365 (part of the Microsoft 365
   subscription service)
 
@@ -95,14 +87,12 @@ For Microsoft Word 365 configuration details and usage hints, please see:
 Please use either:
 
 - NVDA with the MathCAT add-on
-
 - JAWS 2024 with MathCAT enabled in the Early Adopter dialog
 
 For screen reader configuration details and usage hints, please see either of these
 two documents:
 
 - [Recommended NVDA Screen Reader Settings](recommended_nvda_settings.md)
-
 - [Recommended JAWS Screen Reader Settings](recommended_jaws_settings.md)
 
 These documents should be available wherever you find this one.
@@ -112,23 +102,14 @@ These documents should be available wherever you find this one.
 Please record the following information:
 
 - The date
-
 - The Operating System
-
 - The Version of Microsoft Word
-
 - Screen reader version
-
 - MathCAT add-on version (if using NVDA)
-
 - Relevant screen reader settings:
-
   - Voice synthesizer
-
   - Voice
-
   - Screen reader verbosity settings
-
   - Math / MathCAT settings
 
 ## Walk-through Script
@@ -138,13 +119,9 @@ problems are available for use with this script:
 
 - [Math Homework Problems
   Webpage](../test_content/homework_problems.html)
-
 - [Solutions for the Math Homework Problems
   Webpage](../test_content/homework_solutions.html)
-
-- Math Homework Problems EPUB
-
-- Solutions for the Math Homework Problems EPUB
+- [Math Homework Problems EPUB](../test_content/homework_problems.epub)
 
 ### Navigate to a web page or EPUB that has a set of homework problems to solve.
 
@@ -177,7 +154,6 @@ problems are available for use with this script:
 
 - Move to a new line in the Word document that is beneath the expression
   you pasted in above.
-
 - Recreate the expression from scratch (don’t copy and paste it this
   time). Refer to the original expression as necessary.
 
