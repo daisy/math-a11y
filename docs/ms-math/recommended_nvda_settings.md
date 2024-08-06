@@ -148,7 +148,7 @@ any time during navigation, you can switch the navigation modes using
 shift+up/down arrow. This is useful because each mode of navigation has
 its strengths and weaknesses.
 
-# To Copy a Math Expression with MathCAT
+# To Copy a Math Expression from a Web Page Using MathCAT
 
 While navigating an expression, “control+c” copies the MathML for the
 part of the expression you are currently navigating. If you want to copy
