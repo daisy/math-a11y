@@ -1,5 +1,5 @@
 # Microsoft Equations Usability/Accessibility Walk-through Script
-
+[Skip to the start of the walkthrough script](#walk-through-script)
 ## Introduction to the Usability Study
 
 ### Purpose
