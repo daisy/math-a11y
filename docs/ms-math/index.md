@@ -6,7 +6,7 @@ For this project, we have developed a artifacts to help us perform the evaluatio
     * [Recommended JAWS Settings](recommended_jaws_settings.md)
     * [Recommended NVDA Settings](recommended_nvda_settings.md)
     * [Recommended Word 365 Settings](recommended_word_settings.html)
- * A [Walkthrough Script: ms_word_equation_editor_walkthrough_script.docx](ms_word_equation_editor_walkthrough_script.docx)
+ * [Microsoft Word Equation Editor Walkthrough Script](ms_word_equation_editor_walkthrough_script.md)
  * Test Content for Performing the Walkthroughs:
     * [homework problems (web page)](../test_content/homework_problems.html)
     * [homework problem solutions (web page)](../test_content/homework_solutions.html) (the homework problems worked out step-by-step)
