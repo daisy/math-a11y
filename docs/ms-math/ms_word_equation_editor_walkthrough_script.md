@@ -186,4 +186,4 @@ problems are available for use with this script:
 - Copy and paste the expression to a new line in the document.
 
 ### Edit the expression to solve for the variable.
-Rearrange and solve the equation step-by-step, copying to new lines and editing as necessary to show detailed work. For example solutions of the homework problems see the [homework_solutions web page](../test_content/homework_solutions.html).
+Rearrange and solve the equation step-by-step, copying to new lines and editing as necessary to show detailed work. For example solutions of the homework problems see the [homework solutions web page](../test_content/homework_solutions.html).
