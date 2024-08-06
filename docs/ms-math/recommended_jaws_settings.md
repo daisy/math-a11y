@@ -53,5 +53,4 @@ the words “Math Content”. To copy the expression:
   you hear “Zoomed out all the way”
 - Press “control + c”. You should hear JAWS say “Copied selection to
   clipboard”
-
 - Press “Escape” to close the “Math Viewer” window
