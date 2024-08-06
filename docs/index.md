@@ -21,7 +21,7 @@ We are also using a SharePoint folder for documents. Members can request this li
 
 We plan to work on a number of projects associated with the reading and writing of math. We will list them here:
 
-### Microsoft Word 365
+### [Microsoft Word 365](./ms-math/)
 
 We are collaborating with developers at Microsoft.
 
