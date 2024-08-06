@@ -3,8 +3,8 @@ This project is focused on reviewing the use of the equation editor in Microsoft
 
 For this project, we have developed a artifacts to help us perform the evaluation:
  * Recommended Settings:
-    * [Recommended JAWS Settings](recommended_jaws_settings.html)
-    * [Recommended NVDA Settings](recommended_nvda_settings.html)
+    * [Recommended JAWS Settings](recommended_jaws_settings.md)
+    * [Recommended NVDA Settings](recommended_nvda_settings.md)
     * [Recommended Word 365 Settings](recommended_word_settings.html)
  * A [Walkthrough Script: ms_word_equation_editor_walkthrough_script.docx](ms_word_equation_editor_walkthrough_script.docx)
  * Test Content for Performing the Walkthroughs:
