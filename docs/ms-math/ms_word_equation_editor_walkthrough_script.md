@@ -87,6 +87,9 @@ either:
 - Microsoft Word for Microsoft 365 (part of the Microsoft 365
   subscription service)
 
+For Microsoft Word 365 configuration details and usage hints, please see:
+[Recommended Microsoft Word 365 Settings](recommended_word_365_settings.md)
+
 #### Screen Reader
 
 Please use either:
@@ -95,12 +98,12 @@ Please use either:
 
 - JAWS 2024 with MathCAT enabled in the Early Adopter dialog
 
-For configuration details and usage hints, please see either of these
+For screen reader configuration details and usage hints, please see either of these
 two documents:
 
-- Recommended NVDA Screen Reader Settings.docx
+- [Recommended NVDA Screen Reader Settings](recommended_nvda_settings.md)
 
-- Recommended JAWS Screen Reader Settings.docx
+- [Recommended JAWS Screen Reader Settings](recommended_jaws_settings.md)
 
 These documents should be available wherever you find this one.
 
