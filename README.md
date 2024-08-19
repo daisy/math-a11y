@@ -11,7 +11,7 @@ We plan to collaborate with other groups working on the advancement of mathemati
 
 We are using a DAISY mailing list for our communications.
 
-[Accessible Math math@daisylists.org](math@daisylists.org)
+Email list is: <>math@daisylists.org>
 
 [To sign up to the DAISY Math list discussing reading and writing accessible math, fill out this simple form.](https://daisylists.org/postorius/lists/math.daisylists.org/)
 
