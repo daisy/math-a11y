@@ -23,8 +23,8 @@ We plan to work on a number of projects associated with the reading and writing 
 
 ### Microsoft Word 365
 
-We are collaborating with developers at Microsoft.
+We are collaborating with developers at Microsoft: [Project: Digital Math in Microsoft Word 365 Accessibility](https://daisy.github.io/math-a11y/docs/ms-math/)
 
-If you are posting a message to the mailing list and want to focus on this project, please include in the subject [MS-Math]
+If you are posting a message to the mailing list and want to focus on this project, please begin the email's subject line with "[MS-Math]"
 
 
