@@ -31,9 +31,9 @@ If you are posting a message to the mailing list and want to focus on this proje
 
 The Daisy/math A11y subgroup is discovering issues with the Microsoft Equation Editor, and those issues will go through a process described below:
 
-1. The issue is discovered and submitted on the Issues page for our group https://github.com/daisy/math-a11y/issues .
+1. The issue is discovered and submitted on the [Issues page for our group](https://github.com/daisy/math-a11y/issues).
 2. Another person verifies that the issue exists for them as well.
 3. Depending on what the issue is, it is reported to 
-- Microsoft EDAD https://support.microsoft.com/en-us/accessibility/enterprise-answer-desk  
-- Freedom Scientific, or submitted to the MathCat GitHub.
+   - [Microsoft eDAD](https://support.microsoft.com/en-us/accessibility/enterprise-answer-desk)  
+   - Freedom Scientific, or submitted to the [MathCat GitHub](https://github.com/NSoiffer/MathCAT).
 
