@@ -37,3 +37,10 @@ The Daisy/math A11y subgroup is discovering issues with the Microsoft Equation E
    - [Microsoft eDAD](https://support.microsoft.com/en-us/accessibility/enterprise-answer-desk)  
    - Freedom Scientific, or submitted to the [MathCat GitHub](https://github.com/NSoiffer/MathCAT).
 
+##Discussions
+
+Various topics are discussed on the mailing list, on conference calls, and on the discussion list in the repo.
+
+[Discussion list on GitHub repo](https://github.com/daisy/math-a11y/discussions)
+
+Please join on discussions or create a new topic. Discussion topics may lead to an issue being created.
