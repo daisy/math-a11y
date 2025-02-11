@@ -271,7 +271,7 @@
                     <th scope="row">Repeating decimal</th>
                     <td>\overbar</td>
                     <td class="symbol"><img data-hex="203e" data-char="‾" src="images/203e.svg" alt="overline"></td>
-                    <td><code>4.\overbar(3)</code></td>
+                    <td><code>4.\overbar(3)&lt;sp&gt;</code></td>
                     
                     <td class="exampleOutput"><img src="images/001/image007.png" class="exampleOutput" aria-hidden="true" role="presentation" height="30" alt="">
                         <div class="visuallyHidden"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
@@ -334,17 +334,22 @@
                     <th scope="row">Square Root</th>
                     <td>\sqrt</td>
                     <td class="symbol"><img data-hex="221a" data-char="√" src="images/221a.svg" alt="square root"></td>
-                    <td><code>\sqrt&lt;sp&gt;<wbr>x&lt;sp&gt;<wbr></code></td>
+                    <td><code>\sqrt(3x+1)&lt;sp&gt;</code></td>
                     
                     <td class="exampleOutput"><img src="images/001/image010.png" class="exampleOutput" aria-hidden="true" role="presentation" height="29" alt="">
                         <div class="visuallyHidden"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-                                <semantics>
-                                    <msqrt>
-                                        <mi>x</mi>
-                                    </msqrt>
-                                    <annotation encoding="application/x-tex">\sqrt{x}</annotation>
-                                </semantics>
-                            </math></div>
+                            <msqrt>
+                              <mrow>
+                                <mrow>
+                                  <mn>3</mn>
+                                  <mo>&#x2062;</mo>
+                                  <mi>x</mi>
+                                </mrow>
+                                <mo>+</mo>
+                                <mn>1</mn>
+                              </mrow>
+                            </msqrt>
+                          </math></div>
                     </td>
                     <td></td>
                 </tr>
@@ -409,7 +414,7 @@
                     <th scope="row">Cents sign</th>
                     <td>a2&lt;Alt+x&gt;</td>
                     <td class="symbol"><img data-hex="00a2" data-char="¢" src="images/00a2.svg" alt="cent sign"></td>
-                    <td><code>50 a2&lt;Alt+x&gt;</code></td>
+                    <td><code>50&lt;sp&gt;<wbr>a2&lt;Alt+x&gt;</code></td>
                     
                     <td class="exampleOutput"><img src="images/001/image014.png" class="exampleOutput" aria-hidden="true" role="presentation" height="26" alt="">
                         <div class="visuallyHidden"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
@@ -423,7 +428,7 @@
                                 </semantics>
                             </math></div>
                     </td>
-                    <td></td>
+                    <td>The space before the cents sign can be removed after creating it.</td>
                 </tr>
                 <tr>
                     <th scope="row">Infinity</th>
@@ -551,7 +556,7 @@
                     <th scope="row">Skewed (bi-level) fraction</th>
                     <td>\sdivide</td>
                     <td class="symbol">N/A</td>
-                    <td><code>6\sdivide&lt;sp&gt;<wbr>3</code></td>
+                    <td><code>6\sdivide&lt;sp&gt;<wbr>3&lt;sp&gt;</code></td>
                     
                     <td class="exampleOutput"><img src="images/002/image002.png" class="exampleOutput" aria-hidden="true" role="presentation" height="35" alt=""></td>
                     <td></td>
@@ -560,7 +565,7 @@
                     <th scope="row">Linear fraction</th>
                     <td>\ldivide</td>
                     <td class="symbol">N/A</td>
-                    <td><code>6\ldivide&lt;sp&gt;<wbr>3</code></td>
+                    <td><code>6\ldivide&lt;sp&gt;<wbr>3&lt;sp&gt;</code></td>
                     
                     <td class="exampleOutput"><img src="images/002/image003.png" class="exampleOutput" aria-hidden="true" role="presentation" height="26" alt="">
                         <div class="visuallyHidden"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
@@ -735,7 +740,7 @@
                     <td>Also available: <code>\leq</code> or <code>&lt;=</code></td>
                 </tr>
                 <tr>
-                    <th scope="row">Neither Less Than Nor Equal to</th>
+                    <th scope="row">Neither Less Than Nor Equal</th>
                     <td><span class="nb">/\</span>le</td>
                     <td class="symbol"><img data-hex="2270" data-char="≰" src="images/2270.svg" alt="is neither less than nor equal to"></td>
                     <td><code>a<span class="nb">/\</span>le&lt;sp&gt;<wbr>b</code></td>
@@ -838,19 +843,28 @@
                     <th scope="row">Congruent to</th>
                     <td>\cong</td>
                     <td class="symbol"><img data-hex="2245" data-char="≅" src="images/2245.svg" alt="approximately equals"></td>
-                    <td><code>A\cong&lt;sp&gt;<wbr>B</code></td>
+                    <td><code>\overbar(AB)&lt;sp&gt;<wbr>\cong\overbar(CD)&lt;sp&gt;</code></td>
                     
                     <td class="exampleOutput"><img src="images/003/image013.png" class="exampleOutput" aria-hidden="true" role="presentation" height="26" alt="">
                         <div class="visuallyHidden"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-                                <semantics>
-                                    <mrow>
-                                        <mi>A</mi>
-                                        <mo>≅</mo>
-                                        <mi>B</mi>
-                                    </mrow>
-                                    <annotation encoding="application/x-tex">A\cong B</annotation>
-                                </semantics>
-                            </math></div>
+                            <mover>
+                              <mrow>
+                                <mi>A</mi>
+                                <mo>&#x2062;</mo>
+                                <mi>B</mi>
+                              </mrow>
+                              <mo accent="true">&#x2015;</mo>
+                            </mover>
+                            <mo>&#x2245;</mo>
+                            <mover>
+                              <mrow>
+                                <mi>C</mi>
+                                <mo>&#x2062;</mo>
+                                <mi>D</mi>
+                              </mrow>
+                              <mo accent="true">&#x2015;</mo>
+                            </mover>
+                          </math></div>
                     </td>
                     <td></td>
                 </tr>
@@ -858,19 +872,28 @@
                     <th scope="row">Not congruent to</th>
                     <td><span class="nb">/\</span>cong</td>
                     <td class="symbol"><img data-hex="2247" data-char="≇" src="images/2247.svg" alt="neither approximately nor actually equals"></td>
-                    <td><code>A<span class="nb">/\</span>cong&lt;sp&gt;<wbr>B</code></td>
+                    <td><code>\overbar(AB)&lt;sp&gt;<wbr><span class="nb">/\</span>cong&lt;sp&gt;<wbr>\overbar(CD)&lt;sp&gt;</code></td>
                     
                     <td class="exampleOutput"><img src="images/003/image014.png" class="exampleOutput" aria-hidden="true" role="presentation" height="26" alt="">
                         <div class="visuallyHidden"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-                                <semantics>
-                                    <mrow>
-                                        <mi>A</mi>
-                                        <mo>≆</mo>
-                                        <mi>B</mi>
-                                    </mrow>
-                                    <annotation encoding="application/x-tex">A\not\cong B</annotation>
-                                </semantics>
-                            </math></div>
+                            <mover>
+                              <mrow>
+                                <mi>A</mi>
+                                <mo>&#x2062;</mo>
+                                <mi>B</mi>
+                              </mrow>
+                              <mo accent="true">&#x2015;</mo>
+                            </mover>
+                            <mo>&#x2247;</mo>
+                            <mover>
+                              <mrow>
+                                <mi>C</mi>
+                                <mo>&#x2062;</mo>
+                                <mi>D</mi>
+                              </mrow>
+                              <mo accent="true">&#x2015;</mo>
+                            </mover>
+                          </math></div>
                     </td>
                     <td></td>
                 </tr>
@@ -878,31 +901,34 @@
                     <th scope="row">Similar to</th>
                     <td>\sim</td>
                     <td class="symbol"><img data-hex="223c" data-char="∼" src="images/223c.svg" alt="tilde"></td>
-                    <td><code>ABC\sim&lt;sp&gt;<wbr>DEF</code></td>
+                    <td><code>ABCD\sim&lt;sp&gt;<wbr>EFGH</code></td>
                     
                     <td class="exampleOutput"><img src="images/003/image015.png" class="exampleOutput" aria-hidden="true" role="presentation" height="26" alt="">
                         <div class="visuallyHidden"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-                                <semantics>
-                                    <mrow>
-                                        <mrow>
-                                            <mi>A</mi>
-                                            <mo>⁢</mo>
-                                            <mi>B</mi>
-                                            <mo>⁢</mo>
-                                            <mi>C</mi>
-                                        </mrow>
-                                        <mo>∼</mo>
-                                        <mrow>
-                                            <mi>D</mi>
-                                            <mo>⁢</mo>
-                                            <mi>E</mi>
-                                            <mo>⁢</mo>
-                                            <mi>F</mi>
-                                        </mrow>
-                                    </mrow>
-                                    <annotation encoding="application/x-tex">ABC\sim DEF</annotation>
-                                </semantics>
-                            </math></div>
+                            <mrow>
+                              <mi>A</mi>
+                              <mo>&#x2062;</mo>
+                              <mi>B</mi>
+                              <mo>&#x2062;</mo>
+                              <mi>C</mi>
+                              <mo>&#x2062;</mo>
+                              <mi>D</mi>
+                            </mrow>
+                            <mo>&#x223C;</mo>
+                            <mrow>
+                              <mi>E</mi>
+                              <mo>&#x2062;</mo>
+                              <mrow>
+                                <mi>F</mi>
+                                <mo>&#x2061;</mo>
+                                <mrow>
+                                  <mi>G</mi>
+                                  <mo>&#x2061;</mo>
+                                  <mi>H</mi>
+                                </mrow>
+                              </mrow>
+                            </mrow>
+                          </math></div>
                     </td>
                     <td></td>
                 </tr>
@@ -910,31 +936,34 @@
                     <th scope="row">Not similar to</th>
                     <td><span class="nb">/\</span>sim</td>
                     <td class="symbol"><img data-hex="2241" data-char="≁" src="images/2241.svg" alt="not tilde"></td>
-                    <td><code>ABC<span class="nb">/\</span>sim&lt;sp&gt;<wbr>DEF</code></td>
+                    <td><code>ABCD<span class="nb">/\</span>sim&lt;sp&gt;<wbr>EFGH</code></td>
                     
                     <td class="exampleOutput"><img src="images/003/image016.png" class="exampleOutput" aria-hidden="true" role="presentation" height="26" alt="">
                         <div class="visuallyHidden"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-                                <semantics>
-                                    <mrow>
-                                        <mrow>
-                                            <mi>A</mi>
-                                            <mo>⁢</mo>
-                                            <mi>B</mi>
-                                            <mo>⁢</mo>
-                                            <mi>C</mi>
-                                        </mrow>
-                                        <mo>≁</mo>
-                                        <mrow>
-                                            <mi>D</mi>
-                                            <mo>⁢</mo>
-                                            <mi>E</mi>
-                                            <mo>⁢</mo>
-                                            <mi>F</mi>
-                                        </mrow>
-                                    </mrow>
-                                    <annotation encoding="application/x-tex">ABC\not\sim DEF</annotation>
-                                </semantics>
-                            </math></div>
+                            <mrow>
+                              <mi>A</mi>
+                              <mo>&#x2062;</mo>
+                              <mi>B</mi>
+                              <mo>&#x2062;</mo>
+                              <mi>C</mi>
+                              <mo>&#x2062;</mo>
+                              <mi>D</mi>
+                            </mrow>
+                            <mo>&#x2241;</mo>
+                            <mrow>
+                              <mi>E</mi>
+                              <mo>&#x2062;</mo>
+                              <mrow>
+                                <mi>F</mi>
+                                <mo>&#x2061;</mo>
+                                <mrow>
+                                  <mi>G</mi>
+                                  <mo>&#x2061;</mo>
+                                  <mi>H</mi>
+                                </mrow>
+                              </mrow>
+                            </mrow>
+                          </math></div>
                     </td>
                     <td></td>
                 </tr>
@@ -1076,7 +1105,7 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <th scope="row">Neither a Subset of nor equal to</th>
+                    <th scope="row">Neither a Subset of nor equal</th>
                     <td><span class="nb">/\</span>subseteq</td>
                     <td class="symbol"><img data-hex="2288" data-char="⊈" src="images/2288.svg" alt="neither a subset of nor equal to"></td>
                     <td><code>A<span class="nb">/\</span>subseteq&lt;sp&gt;<wbr>B</code></td>
@@ -1727,7 +1756,7 @@
                 <tr>
                     <th scope="row">Phi</th>
                     <td>\phi</td>
-                    <td class="symbol"><img data-hex="03c6" data-char="φ" src="images/03c6.svg" alt="phi"></td>
+                    <td class="symbol"><img data-hex="03d5" data-char="ϕ" src="images/03d5.svg" alt="phi"></td>
                     <td><code>\phi&lt;sp&gt;</code></td>
                     
                     <td class="exampleOutput"><img src="images/006/image011.png" class="exampleOutput" aria-hidden="true" role="presentation" height="26" alt="">
@@ -1824,7 +1853,7 @@
                     <th scope="row">Limit</th>
                     <td>lim</td>
                     <td class="symbol">N/A</td>
-                    <td><code>lim_(x\to\infty)&lt;sp&gt;\begin&lt;sp&gt;1/x&lt;sp&gt;\end&lt;sp&gt;=0</code></td>
+                    <td><code>lim_(x\to\infty)&lt;sp&gt;1/x&lt;sp&gt;&lt;right arrow key&gt;=0</code></td>
                     
                     <td class="exampleOutput"><img src="images/007/image001.png" class="exampleOutput" aria-hidden="true" role="presentation" height="50" alt="">
                         <div class="visuallyHidden"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
@@ -2207,7 +2236,7 @@
                 </tr>
             </tbody>
         </table>
-        <h2 id="vectors-and-geometry">Vectors and Geometry</h2>
+        <h2 id="vectors-and-geometry">Geometry and Vectors</h2>
         <table>
             <thead>
                 <tr>
@@ -2225,7 +2254,7 @@
                     <th scope="row">Line Segment (overbar)</th>
                     <td>\overbar</td>
                     <td class="symbol">N/A</td>
-                    <td><code>\overbar(AB)</code></td>
+                    <td><code>\overbar(AB)&lt;sp&gt;</code></td>
                     
                     <td class="exampleOutput"><img src="images/008/image001.png" class="exampleOutput" aria-hidden="true" role="presentation" height="30" alt="">
                         <div class="visuallyHidden"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
@@ -2356,7 +2385,7 @@
                     <th scope="row">Not perpendicular to</th>
                     <td><span class="nb">/\</span>perp</td>
                     <td class="symbol"><img data-hex="22a5+0338" data-char="⊥̸" src="images/22a5+0338.svg" alt="up tack ̸"></td>
-                    <td><code>\overbar(AB)&lt;sp&gt;(\perp)0338&lt;Alt+x&gt;&lt;sp&gt;\overbar(DF)</code></td>
+                    <td><code>\overbar(AB)&lt;sp&gt;(\perp)0338&lt;Alt+x&gt;&lt;sp&gt;\overbar(DF)&lt;sp&gt;</code></td>
                     
                     <td class="exampleOutput"><img src="images/008/image007.png" class="exampleOutput" aria-hidden="true" role="presentation" height="30" alt="">
                         <div class="visuallyHidden"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
@@ -2393,17 +2422,17 @@
                     <th scope="row">Parallel</th>
                     <td>\parallel</td>
                     <td class="symbol"><img data-hex="2225" data-char="∥" src="images/2225.svg" alt="parallel to"></td>
-                    <td><code>A\parallel&lt;sp&gt;<wbr>B</code></td>
+                    <td><code>a\parallel&lt;sp&gt;<wbr>b</code></td>
                     
                     <td class="exampleOutput"><img src="images/008/image008.png" class="exampleOutput" aria-hidden="true" role="presentation" height="26" alt="">
                         <div class="visuallyHidden"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
                                 <semantics>
                                     <mrow>
-                                        <mi>A</mi>
+                                        <mi>a</mi>
                                         <mo>∥</mo>
-                                        <mi>B</mi>
+                                        <mi>b</mi>
                                     </mrow>
-                                    <annotation encoding="application/x-tex">A \parallel B</annotation>
+                                    <annotation encoding="application/x-tex">a \parallel b</annotation>
                                 </semantics>
                             </math></div>
                     </td>
@@ -2413,7 +2442,7 @@
                     <th scope="row">Not parallel to</th>
                     <td>2226&lt;Alt+x&gt;</td>
                     <td class="symbol"><img data-hex="2226" data-char="∦" src="images/2226.svg" alt="not parallel to"></td>
-                    <td><code>\overbar(AB)&lt;sp&gt;2226&lt;Alt+x&gt; \overbar(CD)</code></td>
+                    <td><code>\overbar(AB)&lt;sp&gt;2226&lt;Alt+x&gt;\overbar(CD)&lt;sp&gt;</code></td>
                     
                     <td class="exampleOutput"><img src="images/008/image009.png" class="exampleOutput" aria-hidden="true" role="presentation" height="30" alt="">
                         <div class="visuallyHidden"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
@@ -2448,19 +2477,28 @@
                     <th scope="row">Congruent to</th>
                     <td>\cong</td>
                     <td class="symbol"><img data-hex="2245" data-char="≅" src="images/2245.svg" alt="approximately equals"></td>
-                    <td><code>A\cong&lt;sp&gt;<wbr>B</code></td>
+                    <td><code>\overbar(AB)&lt;sp&gt;<wbr>\cong\overbar(CD)&lt;sp&gt;</code></td>
                     
-                    <td class="exampleOutput"><img src="images/008/image010.png" class="exampleOutput" aria-hidden="true" role="presentation" height="26" alt="">
+                    <td class="exampleOutput"><img src="images/003/image013.png" class="exampleOutput" aria-hidden="true" role="presentation" height="26" alt="">
                         <div class="visuallyHidden"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-                                <semantics>
-                                    <mrow>
-                                        <mi>A</mi>
-                                        <mo>≅</mo>
-                                        <mi>B</mi>
-                                    </mrow>
-                                    <annotation encoding="application/x-tex">A\cong B</annotation>
-                                </semantics>
-                            </math></div>
+                            <mover>
+                              <mrow>
+                                <mi>A</mi>
+                                <mo>&#x2062;</mo>
+                                <mi>B</mi>
+                              </mrow>
+                              <mo accent="true">&#x2015;</mo>
+                            </mover>
+                            <mo>&#x2245;</mo>
+                            <mover>
+                              <mrow>
+                                <mi>C</mi>
+                                <mo>&#x2062;</mo>
+                                <mi>D</mi>
+                              </mrow>
+                              <mo accent="true">&#x2015;</mo>
+                            </mover>
+                          </math></div>
                     </td>
                     <td></td>
                 </tr>
@@ -2468,19 +2506,28 @@
                     <th scope="row">Not congruent to</th>
                     <td><span class="nb">/\</span>cong</td>
                     <td class="symbol"><img data-hex="2247" data-char="≇" src="images/2247.svg" alt="neither approximately nor actually equals"></td>
-                    <td><code>A<span class="nb">/\</span>cong&lt;sp&gt;<wbr>B</code></td>
+                    <td><code>\overbar(AB)&lt;sp&gt;<wbr><span class="nb">/\</span>cong&lt;sp&gt;<wbr>\overbar(CD)&lt;sp&gt;</code></td>
                     
-                    <td class="exampleOutput"><img src="images/008/image011.png" class="exampleOutput" aria-hidden="true" role="presentation" height="26" alt="">
+                    <td class="exampleOutput"><img src="images/003/image014.png" class="exampleOutput" aria-hidden="true" role="presentation" height="26" alt="">
                         <div class="visuallyHidden"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-                                <semantics>
-                                    <mrow>
-                                        <mi>A</mi>
-                                        <mo>≆</mo>
-                                        <mi>B</mi>
-                                    </mrow>
-                                    <annotation encoding="application/x-tex">A\not\cong B</annotation>
-                                </semantics>
-                            </math></div>
+                            <mover>
+                              <mrow>
+                                <mi>A</mi>
+                                <mo>&#x2062;</mo>
+                                <mi>B</mi>
+                              </mrow>
+                              <mo accent="true">&#x2015;</mo>
+                            </mover>
+                            <mo>&#x2247;</mo>
+                            <mover>
+                              <mrow>
+                                <mi>C</mi>
+                                <mo>&#x2062;</mo>
+                                <mi>D</mi>
+                              </mrow>
+                              <mo accent="true">&#x2015;</mo>
+                            </mover>
+                          </math></div>
                     </td>
                     <td></td>
                 </tr>
@@ -2488,31 +2535,34 @@
                     <th scope="row">Similar to</th>
                     <td>\sim</td>
                     <td class="symbol"><img data-hex="223c" data-char="∼" src="images/223c.svg" alt="tilde"></td>
-                    <td><code>ABC\sim&lt;sp&gt;<wbr>DEF</code></td>
+                    <td><code>ABCD\sim&lt;sp&gt;<wbr>EFGH</code></td>
                     
-                    <td class="exampleOutput"><img src="images/008/image012.png" class="exampleOutput" aria-hidden="true" role="presentation" height="26" alt="">
+                    <td class="exampleOutput"><img src="images/003/image015.png" class="exampleOutput" aria-hidden="true" role="presentation" height="26" alt="">
                         <div class="visuallyHidden"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-                                <semantics>
-                                    <mrow>
-                                        <mrow>
-                                            <mi>A</mi>
-                                            <mo>⁢</mo>
-                                            <mi>B</mi>
-                                            <mo>⁢</mo>
-                                            <mi>C</mi>
-                                        </mrow>
-                                        <mo>∼</mo>
-                                        <mrow>
-                                            <mi>D</mi>
-                                            <mo>⁢</mo>
-                                            <mi>E</mi>
-                                            <mo>⁢</mo>
-                                            <mi>F</mi>
-                                        </mrow>
-                                    </mrow>
-                                    <annotation encoding="application/x-tex">ABC\sim DEF</annotation>
-                                </semantics>
-                            </math></div>
+                            <mrow>
+                              <mi>A</mi>
+                              <mo>&#x2062;</mo>
+                              <mi>B</mi>
+                              <mo>&#x2062;</mo>
+                              <mi>C</mi>
+                              <mo>&#x2062;</mo>
+                              <mi>D</mi>
+                            </mrow>
+                            <mo>&#x223C;</mo>
+                            <mrow>
+                              <mi>E</mi>
+                              <mo>&#x2062;</mo>
+                              <mrow>
+                                <mi>F</mi>
+                                <mo>&#x2061;</mo>
+                                <mrow>
+                                  <mi>G</mi>
+                                  <mo>&#x2061;</mo>
+                                  <mi>H</mi>
+                                </mrow>
+                              </mrow>
+                            </mrow>
+                          </math></div>
                     </td>
                     <td></td>
                 </tr>
@@ -2520,31 +2570,34 @@
                     <th scope="row">Not similar to</th>
                     <td><span class="nb">/\</span>sim</td>
                     <td class="symbol"><img data-hex="2241" data-char="≁" src="images/2241.svg" alt="not tilde"></td>
-                    <td><code>ABC<span class="nb">/\</span>sim&lt;sp&gt;<wbr>DEF</code></td>
+                    <td><code>ABCD<span class="nb">/\</span>sim&lt;sp&gt;<wbr>EFGH</code></td>
                     
-                    <td class="exampleOutput"><img src="images/008/image013.png" class="exampleOutput" aria-hidden="true" role="presentation" height="26" alt="">
+                    <td class="exampleOutput"><img src="images/003/image016.png" class="exampleOutput" aria-hidden="true" role="presentation" height="26" alt="">
                         <div class="visuallyHidden"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-                                <semantics>
-                                    <mrow>
-                                        <mrow>
-                                            <mi>A</mi>
-                                            <mo>⁢</mo>
-                                            <mi>B</mi>
-                                            <mo>⁢</mo>
-                                            <mi>C</mi>
-                                        </mrow>
-                                        <mo>≁</mo>
-                                        <mrow>
-                                            <mi>D</mi>
-                                            <mo>⁢</mo>
-                                            <mi>E</mi>
-                                            <mo>⁢</mo>
-                                            <mi>F</mi>
-                                        </mrow>
-                                    </mrow>
-                                    <annotation encoding="application/x-tex">ABC\not\sim DEF</annotation>
-                                </semantics>
-                            </math></div>
+                            <mrow>
+                              <mi>A</mi>
+                              <mo>&#x2062;</mo>
+                              <mi>B</mi>
+                              <mo>&#x2062;</mo>
+                              <mi>C</mi>
+                              <mo>&#x2062;</mo>
+                              <mi>D</mi>
+                            </mrow>
+                            <mo>&#x2241;</mo>
+                            <mrow>
+                              <mi>E</mi>
+                              <mo>&#x2062;</mo>
+                              <mrow>
+                                <mi>F</mi>
+                                <mo>&#x2061;</mo>
+                                <mrow>
+                                  <mi>G</mi>
+                                  <mo>&#x2061;</mo>
+                                  <mi>H</mi>
+                                </mrow>
+                              </mrow>
+                            </mrow>
+                          </math></div>
                     </td>
                     <td></td>
                 </tr>
@@ -2641,7 +2694,7 @@
                     <th scope="row">Circle</th>
                     <td>25ef&lt;Alt+x&gt;</td>
                     <td class="symbol"><img data-hex="25ef" data-char="◯" src="images/25ef.svg" alt="large circle"></td>
-                    <td><code>25ef&lt;Alt+x&gt; A</code></td>
+                    <td><code>25ef&lt;Alt+x&gt;A</code></td>
                     
                     <td class="exampleOutput"><img src="images/008/image018.png" class="exampleOutput" aria-hidden="true" role="presentation" height="27" alt="">
                         <div class="visuallyHidden"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
@@ -2848,7 +2901,7 @@
                     <th scope="row">Much Less Than</th>
                     <td>\ll</td>
                     <td class="symbol"><img data-hex="226a" data-char="≪" src="images/226a.svg" alt="is much less than"></td>
-                    <td><code>m_e\ll&lt;sp&gt;<wbr>m_p</code></td>
+                    <td><code>m_e\ll&lt;sp&gt;<wbr>m_p&lt;sp&gt;</code></td>
                     
                     <td class="exampleOutput"><img src="images/009/image007.png" class="exampleOutput" aria-hidden="true" role="presentation" height="29" alt="">
                         <div class="visuallyHidden"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
@@ -2874,7 +2927,7 @@
                     <th scope="row">Much Greater Than</th>
                     <td>\gg</td>
                     <td class="symbol"><img data-hex="226b" data-char="≫" src="images/226b.svg" alt="is much greater than"></td>
-                    <td><code>F_g\gg&lt;sp&gt;<wbr>F_e</code></td>
+                    <td><code>F_g\gg&lt;sp&gt;<wbr>F_e&lt;sp&gt;</code></td>
                     
                     <td class="exampleOutput"><img src="images/009/image008.png" class="exampleOutput" aria-hidden="true" role="presentation" height="29" alt="">
                         <div class="visuallyHidden"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
@@ -2916,7 +2969,7 @@
                     <th scope="row">Bare Matrix</th>
                     <td>\matrix</td>
                     <td class="symbol"><img data-hex="25a0" data-char="■" src="images/25a0.svg" alt="black square"></td>
-                    <td><code>\matrix(a&amp;b@c&amp;d)</code></td>
+                    <td><code>\matrix(a&amp;b@c&amp;d)&lt;sp&gt;</code></td>
                     
                     <td class="exampleOutput"><img src="images/010/image001.png" class="exampleOutput" aria-hidden="true" role="presentation" height="45" alt="">
                         <div class="visuallyHidden"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
@@ -2950,7 +3003,7 @@
                     <th scope="row">Matrix with Square Brackets</th>
                     <td>[\matrix(...)]</td>
                     <td class="symbol">N/A</td>
-                    <td><code>[\matrix(a&amp;b@c&amp;d)]</code></td>
+                    <td><code>[\matrix(a&amp;b@c&amp;d)]&lt;sp&gt;</code></td>
                     
                     <td class="exampleOutput"><img src="images/010/image002.png" class="exampleOutput" aria-hidden="true" role="presentation" height="45" alt="">
                         <div class="visuallyHidden"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
@@ -2988,7 +3041,7 @@
                     <th scope="row">Matrix with Curly Braces</th>
                     <td>{\matrix(...)}</td>
                     <td class="symbol">N/A</td>
-                    <td><code>{\matrix(a&amp;b@c&amp;d)}</code></td>
+                    <td><code>{\matrix(a&amp;b@c&amp;d)}&lt;sp&gt;</code></td>
                     
                     <td class="exampleOutput"><img src="images/010/image003.png" class="exampleOutput" aria-hidden="true" role="presentation" height="45" alt="">
                         <div class="visuallyHidden"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
@@ -3026,7 +3079,7 @@
                     <th scope="row">Matrix with Parentheses</th>
                     <td>\pmatrix</td>
                     <td class="symbol"><img data-hex="24a8" data-char="⒨" src="images/24a8.svg" alt="parenthesized m"></td>
-                    <td><code>\pmatrix(a&amp;b@c&amp;d)</code></td>
+                    <td><code>\pmatrix(a&amp;b@c&amp;d)&lt;sp&gt;</code></td>
                     
                     <td class="exampleOutput"><img src="images/010/image004.png" class="exampleOutput" aria-hidden="true" role="presentation" height="45" alt="">
                         <div class="visuallyHidden"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
@@ -3064,7 +3117,7 @@
                     <th scope="row">Matrix with Single Vertical Bars</th>
                     <td>|\matrix(...)|</td>
                     <td class="symbol">N/A</td>
-                    <td><code>|\matrix(a&amp;b@c&amp;d)|</code></td>
+                    <td><code>|\matrix(a&amp;b@c&amp;d)|&lt;sp&gt;</code></td>
                     
                     <td class="exampleOutput"><img src="images/010/image005.png" class="exampleOutput" aria-hidden="true" role="presentation" height="45" alt="">
                         <div class="visuallyHidden"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
@@ -3104,7 +3157,7 @@
                     <th scope="row">Matrix with Double Vertical Bars</th>
                     <td>\Vmatrix</td>
                     <td class="symbol"><img data-hex="24a9" data-char="⒩" src="images/24a9.svg" alt="parenthesized n"></td>
-                    <td><code>\Vmatrix(a&amp;b@c&amp;d)</code></td>
+                    <td><code>\Vmatrix(a&amp;b@c&amp;d)&lt;sp&gt;</code></td>
                     
                     <td class="exampleOutput"><img src="images/010/image006.png" class="exampleOutput" aria-hidden="true" role="presentation" height="45" alt="">
                         <div class="visuallyHidden"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
@@ -3162,7 +3215,7 @@
                     <th scope="row">Matrix Column Separator</th>
                     <td>&amp;</td>
                     <td class="symbol"><img data-hex="0026" data-char="&amp;" src="images/0026.svg" alt="ampersand"></td>
-                    <td><code>\matrix(a&amp;b@c&amp;d)</code></td>
+                    <td><code>\matrix(a&amp;b@c&amp;d)&lt;sp&gt;</code></td>
                     
                     <td class="exampleOutput"><img src="images/010/image001.png" class="exampleOutput" aria-hidden="true" role="presentation" height="45" alt="">
                         <div class="visuallyHidden"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
@@ -3196,7 +3249,7 @@
                     <th scope="row">Matrix Row Separator</th>
                     <td>@</td>
                     <td class="symbol"><img data-hex="0040" data-char="@" src="images/0040.svg" alt="at"></td>
-                    <td><code>\matrix(a&amp;b@c&amp;d)</code></td>
+                    <td><code>\matrix(a&amp;b@c&amp;d)&lt;sp&gt;</code></td>
                     
                     <td class="exampleOutput"><img src="images/010/image001.png" class="exampleOutput" aria-hidden="true" role="presentation" height="45" alt="">
                         <div class="visuallyHidden"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
