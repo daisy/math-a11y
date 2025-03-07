@@ -1,1225 +1,1168 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta charset="UTF-8">
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="expires" content="0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Proposed New Math AutoCorrect Codes</title>
   <style>
-    html {
-      color: #1a1a1a;
-      background-color: #fdfdfd;
+    .visuallyHidden {
+      position: absolute;
+      transform: scale(0);
+      overflow: hidden;
     }
+
     body {
-      margin: 0 auto;
-      max-width: 36em;
-      padding-left: 50px;
-      padding-right: 50px;
-      padding-top: 50px;
-      padding-bottom: 50px;
-      hyphens: auto;
+      color: #1e1e1e;
+      font-family: "Segoe UI", "Segoe UI Web", "wf_segoe-ui_normal", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, sans-serif;
+      font-size: 0.88rem;
+      line-height: 1.5;
+      padding: 0
+    }
+
+    main {
+      max-width: 768px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h3 {
+      margin-bottom: 0.2rem;
+    }
+
+    code {
+      font-size: 90%;
+      background-color: #f4f4f4;
+      font-family: monospace;
+    }
+
+    li code {
+      background-color: #dadada;
+      padding-left: 3px;
+      padding-right: 3px;
+    }
+
+    span.nb {
+      white-space: nowrap !important;
+
+    }
+
+    table {
+      border-collapse: collapse;
+      min-width: 768px;
+    }
+
+    thead th {
+      background-color: #dadada;
+      color: #000000;
+      border: thin solid #aaa;
+      padding: 14px 5px 14px 5px;
+      font-family: "Segoe UI", "Segoe UI Web", "wf_segoe-ui_normal", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, sans-serif;
+      font-weight: 700;
+    }
+
+    tbody th,
+    tbody td {
+      border: thin solid #ccc;
+      background-color: #f4f4f4;
+      padding: 14px 5px 14px 5px;
       overflow-wrap: break-word;
-      text-rendering: optimizeLegibility;
-      font-kerning: normal;
-    }
-    @media (max-width: 600px) {
-      body {
-        font-size: 0.9em;
-        padding: 12px;
-      }
-      h1 {
-        font-size: 1.8em;
-      }
-    }
-    @media print {
-      html {
-        background-color: white;
-      }
-      body {
-        background-color: transparent;
-        color: black;
-        font-size: 12pt;
-      }
-      p, h2, h3 {
-        orphans: 3;
-        widows: 3;
-      }
-      h2, h3, h4 {
-        page-break-after: avoid;
-      }
-    }
-    p {
-      margin: 1em 0;
-    }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
-    }
-    img {
-      max-width: 100%;
-    }
-    svg {
-      height: auto;
-      max-width: 100%;
-    }
-    h1, h2, h3, h4, h5, h6 {
-      margin-top: 1.4em;
-    }
-    h5, h6 {
-      font-size: 1em;
-      font-style: italic;
-    }
-    h6 {
       font-weight: normal;
     }
-    ol, ul {
-      padding-left: 1.7em;
-      margin-top: 1em;
+
+    tbody th {
+      text-align: left;
     }
-    li > ol, li > ul {
-      margin-top: 0;
-    }
-    blockquote {
-      margin: 1em 0 1em 1.7em;
-      padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
-      color: #606060;
-    }
-    code {
-      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
-      font-size: 85%;
-      margin: 0;
-      hyphens: manual;
-    }
-    pre {
-      margin: 1em 0;
-      overflow: auto;
-    }
-    pre code {
-      padding: 0;
-      overflow: visible;
-      overflow-wrap: normal;
-    }
-    .sourceCode {
-     background-color: transparent;
-     overflow: visible;
-    }
-    hr {
-      background-color: #1a1a1a;
-      border: none;
-      height: 1px;
-      margin: 1em 0;
-    }
-    table {
-      margin: 1em 0;
-      border-collapse: collapse;
-      width: 100%;
-      overflow-x: auto;
-      display: block;
-      font-variant-numeric: lining-nums tabular-nums;
-    }
-    table caption {
-      margin-bottom: 0.75em;
-    }
-    tbody {
-      margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
-    }
-    th {
-      border-top: 1px solid #1a1a1a;
-      padding: 0.25em 0.5em 0.25em 0.5em;
-    }
-    td {
-      padding: 0.125em 0.5em 0.25em 0.5em;
-    }
-    header {
-      margin-bottom: 4em;
+
+    td.symbol {
       text-align: center;
-    }
-    #TOC li {
-      list-style: none;
-    }
-    #TOC ul {
-      padding-left: 1.3em;
-    }
-    #TOC > ul {
-      padding-left: 0;
-    }
-    #TOC a:not(:hover) {
-      text-decoration: none;
-    }
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    /* The extra [class] is a hack that increases specificity enough to
-       override a similar rule in reveal.js */
-    ul.task-list[class]{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      font-size: inherit;
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+
+    td.unicodeValue {
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    td.symbol img {
+      display: block;
+      margin: auto;
+      transform: scale(0.8);
+    }
+
+    img.missing {
+      border: thin solid red;
+    }
+
+    td.exampleOutput {
+      font-family: math, "Cambria Math", "Latin Modern Math", "STIX Two Math";
+      text-align: center;
+    }
   </style>
 </head>
+
 <body>
-<header id="title-block-header">
-<h1 class="title">Proposed New Math AutoCorrect Codes</h1>
-</header>
-<h1 id="note-work-in-progress---not-a-finalized-document">Note: Work in
-Progress - not a finalized document</h1>
-<h1 id="relevant-discussions">Relevant Discussions</h1>
-<p>This page is the product of the following two discussions:</p>
-<ul>
-<li><a href="https://github.com/daisy/math-a11y/discussions/25">Let's
-Generate a List of Aliases for Existing Math AutoCorrect Codes</a></li>
-<li><a href="https://github.com/daisy/math-a11y/discussions/26">Let's
-Generate a List of Missing Math AutoCorrect Codes for Commonly Used
-Symbols</a></li>
-</ul>
-<p>For reference, there is a complete list of the MathAutoCorrect
-shortcodes in MS Word 365 in the wiki: <a
-href="https://github.com/daisy/math-a11y/wiki/Reference-List-Math-Autocorrect-Entries-in-MS-Word-365-(Alphabetical)">Reference
-List Math Autocorrect Entries in MS Word 365 (Alphabetical)</a></p>
-<h1
-id="proposed-new-math-autocorrect-entries-for-commonly-used-symbols">Proposed
-New Math AutoCorrect Entries for Commonly Used Symbols</h1>
-<h2 id="how-to-read-these-tables">How to Read These Tables</h2>
-<p>Each section contains a table organizing proposed new Math
-AutoCorrect entries by mathematical category. The tables have six
-columns:</p>
-<ol type="1">
-<li>Name - Description of the symbol</li>
-<li>Symbol - The mathematical symbol as its Unicode character</li>
-<li>Unicode Hex Value - The Unicode hexadecimal value for the
-symbol</li>
-<li>Existing Entries(s) - Current AutoCorrect entries(s) if any exist,
-or "None" if the symbol has no current AutoCorrect entry</li>
-<li>Proposed New Alternative(s) - Proposed new or alternative
-AutoCorrect entry</li>
-<li>Notes - Additional context or important information</li>
-</ol>
-<h2 id="currency-symbols">Currency Symbols</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Symbol</th>
-<th>Unicode Hex Value</th>
-<th>Existing Entry(s)</th>
-<th>Proposed New/Alternative(s)</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Cents sign</td>
-<td>¢</td>
-<td>U+00A2</td>
-<td>None</td>
-<td><code>\cents</code></td>
-<td>Commonly used to help young students understand money-related
-arithmetic.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="numbers">Numbers</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Symbol</th>
-<th>Unicode Hex Value</th>
-<th>Existing Entry(s)</th>
-<th>Proposed New Alternative(s)</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Repeating decimal</td>
-<td>¯</td>
-<td>U+00AF</td>
-<td><code>\overbar</code>, <code>\overline</code></td>
-<td><code>\repeat</code></td>
-<td>Common in early algebra; current codes don't reflect mathematical
-meaning</td>
-</tr>
-<tr>
-<td>Repeating decimal</td>
-<td>¯</td>
-<td>U+00AF</td>
-<td><code>\overbar</code>, <code>\overline</code></td>
-<td><code>\repeating</code></td>
-<td>Common in early algebra; current codes don't reflect mathematical
-meaning</td>
-</tr>
-<tr>
-<td>Repeating decimal</td>
-<td>¯</td>
-<td>U+00AF</td>
-<td><code>\overbar</code>, <code>\overline</code></td>
-<td><code>\vinculum</code></td>
-<td>Common in early algebra; current codes don't reflect mathematical
-meaning</td>
-</tr>
-</tbody>
-</table>
-<h2 id="basic-symbols-and-operations">Basic Symbols and Operations</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Symbol</th>
-<th>Unicode Hex Value</th>
-<th>Existing Entry(s)</th>
-<th>Proposed New/Alternative(s)</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Infinity</td>
-<td>∞</td>
-<td>U+221E</td>
-<td><code>\infty</code></td>
-<td><code>\infinity</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Square root</td>
-<td>√</td>
-<td>U+221A</td>
-<td><code>\sqrt</code></td>
-<td><code>\2root</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Cube root</td>
-<td>∛</td>
-<td>U+221B</td>
-<td><code>\cbrt</code></td>
-<td><code>\3root</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Fourth root</td>
-<td>∜</td>
-<td>U+221C</td>
-<td><code>\qdrt</code></td>
-<td><code>\4root</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Composition</td>
-<td>∘</td>
-<td>U+2218</td>
-<td><code>\circ</code></td>
-<td><code>\comp</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Degrees</td>
-<td>°</td>
-<td>U+00B0</td>
-<td><code>\degree</code></td>
-<td><code>\deg</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Radians</td>
-<td>㎭</td>
-<td>U+33AD</td>
-<td>N\A</td>
-<td><code>\rad</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Join</td>
-<td>⋈</td>
-<td>U+22C8</td>
-<td><code>\bowtie</code></td>
-<td><code>\join</code></td>
-<td></td>
-</tr>
-<tr>
-<td>End of proof, QED</td>
-<td>∎</td>
-<td>U+220E</td>
-<td>N/A</td>
-<td><code>\qed</code></td>
-<td></td>
-</tr>
-<tr>
-<td>End of proof, QED</td>
-<td>∎</td>
-<td>U+220E</td>
-<td>N/A</td>
-<td><code>\endproof</code></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="geometry-and-measurement">Geometry and Measurement</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Symbol</th>
-<th>Unicode Hex Value</th>
-<th>Existing Entry(s)</th>
-<th>Proposed New/Alternative(s)</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Circle</td>
-<td>◯</td>
-<td>U+25EF</td>
-<td>None</td>
-<td><code>\circle</code></td>
-<td>The circle symbol is larger than the letter O, but could possibly be
-confused with the letter O. Note that <code>\odot</code> produces ⊙,
-which is read as "circle dot operator."</td>
-</tr>
-<tr>
-<td>Circle with dot inside</td>
-<td>⊙</td>
-<td>U+2299</td>
-<td><code>\odot</code></td>
-<td><code>\circledot</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Line (combining left-right arrow above)</td>
-<td>⃡</td>
-<td>U+20E1</td>
-<td><code>\tvec</code></td>
-<td><code>\line</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Segment</td>
-<td>¯</td>
-<td>U+00AF</td>
-<td><code>\overbar</code>, <code>\overline</code></td>
-<td><code>\seg</code></td>
-<td>Direct connection to mathematical terminology</td>
-</tr>
-<tr>
-<td>Measured angle</td>
-<td>∡</td>
-<td>U+2221</td>
-<td>None</td>
-<td><code>\measangle</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Right angle</td>
-<td>∟</td>
-<td>U+221F</td>
-<td>None</td>
-<td><code>\rightangle</code></td>
-<td>This symbol does not appear in any of the galleries of Word's
-equation toolbar.</td>
-</tr>
-<tr>
-<td>Triangle</td>
-<td>△</td>
-<td>U+25B3</td>
-<td>None</td>
-<td><code>\triangle</code></td>
-<td>This is read as "white up-pointing triangle."</td>
-</tr>
-<tr>
-<td>Parallelogram</td>
-<td>▱</td>
-<td>U+25B1</td>
-<td><code>\underline</code></td>
-<td><code>\parallelogram</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Not parallel to</td>
-<td>∦</td>
-<td>U+2226</td>
-<td>N/A</td>
-<td><code>\notparallel</code></td>
-<td>Using <code>/\parallel</code> does not work.</td>
-</tr>
-<tr>
-<td>Ray (combining right arrow above)</td>
-<td>⃗</td>
-<td>U+20D7</td>
-<td><code>\vec</code></td>
-<td><code>\ray</code></td>
-<td>Students learn rays before vectors in geometry; current code creates
-unnecessary cognitive load by using vector terminology for a basic
-geometric concept</td>
-</tr>
-<tr>
-<td>Arc</td>
-<td>⏜</td>
-<td>U+23DC</td>
-<td><code>\overparen</code></td>
-<td><code>\arc</code></td>
-<td>Current code reflects shape rather than mathematical meaning; new
-code matches standard geometric terminology and verbal expression</td>
-</tr>
-</tbody>
-</table>
-<h2 id="inequalities-and-relations">Inequalities and Relations</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Symbol</th>
-<th>Unicode Hex Value</th>
-<th>Existing Entry(s)</th>
-<th>Proposed New/Alternative(s)</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Not less than</td>
-<td>≮</td>
-<td>U+226E</td>
-<td><code>/&lt;</code></td>
-<td><code>\nlt</code></td>
-<td>The symbol is not rendering properly in Edge or Chrome (OK in
-Firefox).</td>
-</tr>
-<tr>
-<td>Not less than</td>
-<td>≮</td>
-<td>U+226E</td>
-<td><code>/&lt;</code></td>
-<td><code>\notlt</code></td>
-<td>The symbol is not rendering properly in Edge or Chrome (OK in
-Firefox).</td>
-</tr>
-<tr>
-<td>Not greater than</td>
-<td>≯</td>
-<td>U+226F</td>
-<td><code>/&gt;</code></td>
-<td><code>\ngt</code></td>
-<td>The symbol is not rendering properly in Edge or Chrome (OK in
-Firefox).</td>
-</tr>
-<tr>
-<td>Not greater than</td>
-<td>≯</td>
-<td>U+226F</td>
-<td><code>/&gt;</code></td>
-<td><code>\notgt</code></td>
-<td>The symbol is not rendering properly in Edge or Chrome (OK in
-Firefox).</td>
-</tr>
-<tr>
-<td>Neither less than nor equal to</td>
-<td>≰</td>
-<td>U+2270</td>
-<td><code>/\le</code></td>
-<td><code>\nleq</code></td>
-<td>The symbol is not rendering properly in Edge or Chrome (OK in
-Firefox).</td>
-</tr>
-<tr>
-<td>Neither less than nor equal to</td>
-<td>≰</td>
-<td>U+2270</td>
-<td><code>/\le</code></td>
-<td><code>\notle</code></td>
-<td>The symbol is not rendering properly in Edge or Chrome (OK in
-Firefox).</td>
-</tr>
-<tr>
-<td>Neither greater than nor equal to</td>
-<td>≱</td>
-<td>U+2271</td>
-<td><code>/\ge</code></td>
-<td><code>\nge</code></td>
-<td>The symbol is not rendering properly in Edge or Chrome (OK in
-Firefox).</td>
-</tr>
-<tr>
-<td>Neither greater than nor equal to</td>
-<td>≱</td>
-<td>U+2271</td>
-<td><code>/\ge</code></td>
-<td><code>\notge</code></td>
-<td>The symbol is not rendering properly in Edge or Chrome (OK in
-Firefox).</td>
-</tr>
-<tr>
-<td>Neither greater than nor equal to</td>
-<td>≱</td>
-<td>U+2271</td>
-<td><code>/\ge</code></td>
-<td><code>\ngeq</code></td>
-<td>The symbol is not rendering properly in Edge or Chrome (OK in
-Firefox).</td>
-</tr>
-<tr>
-<td>Neither greater than nor equal to</td>
-<td>≱</td>
-<td>U+2271</td>
-<td><code>/\ge</code></td>
-<td><code>\notgeq</code></td>
-<td>The symbol is not rendering properly in Edge or Chrome (OK in
-Firefox).</td>
-</tr>
-<tr>
-<td>Logical not</td>
-<td>¬</td>
-<td>U+00AC</td>
-<td><code>\neg</code></td>
-<td><code>\not</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Much greater than</td>
-<td>≫</td>
-<td>U+226B</td>
-<td><code>\gg</code></td>
-<td><code>\muchgreater</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Much less than</td>
-<td>≪</td>
-<td>U+226A</td>
-<td><code>\ll</code></td>
-<td><code>\muchless</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Not almost equal to</td>
-<td>≉</td>
-<td>U+2249</td>
-<td><code>/\approx</code></td>
-<td><code>\notapprox</code></td>
-<td>The symbol is not rendering properly in Edge or Chrome (OK in
-Firefox).</td>
-</tr>
-<tr>
-<td>Not congruent to</td>
-<td>≇</td>
-<td>U+2247</td>
-<td><code>/\cong</code></td>
-<td><code>\notcong</code></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="calculus">Calculus</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Symbol</th>
-<th>Unicode Hex Value</th>
-<th>Existing Entry(s)</th>
-<th>Proposed New Alternative(s)</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Double integral</td>
-<td>∬</td>
-<td>U+222C</td>
-<td><code>\iint</code></td>
-<td><code>\doubleint</code></td>
-<td>More intuitive than repeating the letter</td>
-</tr>
-<tr>
-<td>Triple integral</td>
-<td>∭</td>
-<td>U+222D</td>
-<td><code>\iiint</code></td>
-<td><code>\tripleint</code></td>
-<td>More intuitive than repeating the letter</td>
-</tr>
-<tr>
-<td>Double prime</td>
-<td>″</td>
-<td>U+2033</td>
-<td><code>\pprime</code></td>
-<td><code>\dprime</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Double prime</td>
-<td>″</td>
-<td>U+2033</td>
-<td><code>\pprime</code></td>
-<td><code>\doubleprime</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Triple prime</td>
-<td>‴</td>
-<td>U+2034</td>
-<td><code>\ppprime</code></td>
-<td><code>\tprime</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Triple prime</td>
-<td>‴</td>
-<td>U+2034</td>
-<td><code>\ppprime</code></td>
-<td><code>\tripleprime</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Quadruple prime</td>
-<td>⁗</td>
-<td>U+2057</td>
-<td><code>\pppprime</code></td>
-<td><code>\qprime</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Quadruple prime</td>
-<td>⁗</td>
-<td>U+2057</td>
-<td><code>\pppprime</code></td>
-<td><code>\quadprime</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Nabla/Gradient</td>
-<td>∇</td>
-<td>U+2207</td>
-<td><code>\nabla</code></td>
-<td><code>\grad</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Laplacian</td>
-<td>∆</td>
-<td>U+2206</td>
-<td><code>\inc</code></td>
-<td><code>\laplace</code></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="set-theory">Set Theory</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Symbol</th>
-<th>Unicode Hex Value</th>
-<th>Existing Entry(s)</th>
-<th>Proposed New/Alternative(s)</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Union</td>
-<td>∪</td>
-<td>U+222A</td>
-<td><code>\cup</code></td>
-<td><code>\union</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Union</td>
-<td>⋃</td>
-<td>U+22C3</td>
-<td><code>\bigcup</code></td>
-<td><code>\Union</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Intersection</td>
-<td>∩</td>
-<td>U+2229</td>
-<td><code>\cap</code></td>
-<td><code>\intersection</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Intersection</td>
-<td>⋂</td>
-<td>U+22C2</td>
-<td><code>\bigcap</code></td>
-<td><code>\Intersection</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Not a subset of</td>
-<td>⊄</td>
-<td>U+2284</td>
-<td><code>/\subset</code></td>
-<td><code>\notsubset</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Not a superset of</td>
-<td>⊅</td>
-<td>U+2285</td>
-<td><code>/\superset</code></td>
-<td><code>\notsuperset</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Neither a subset of nor equal to</td>
-<td>⊈</td>
-<td>U+2288</td>
-<td><code>/\subseteq</code></td>
-<td><code>\notsubseteq</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Neither a superset of nor equal to</td>
-<td>⊉</td>
-<td>U+2289</td>
-<td><code>/\superseteq</code></td>
-<td><code>\notsuperseteq</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Subset of with not equal to</td>
-<td>⊊</td>
-<td>U+228A</td>
-<td>None</td>
-<td><code>\subsetnoteq</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Superset of with not equal to</td>
-<td>⊋</td>
-<td>U+228B</td>
-<td>None</td>
-<td><code>\supersetnoteq</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Element of; belongs to</td>
-<td>∈</td>
-<td>U+2208</td>
-<td><code>\in</code></td>
-<td><code>\belongs</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Element of; belongs to</td>
-<td>∈</td>
-<td>U+2208</td>
-<td><code>\in</code></td>
-<td><code>\element</code></td>
-<td>Pairs with <code>\notelement</code></td>
-</tr>
-<tr>
-<td>Contains as member</td>
-<td>∋</td>
-<td>U+220B</td>
-<td><code>\ni</code></td>
-<td><code>\contains</code></td>
-<td>Current code (<code>\ni</code>) is counterintuitive as it could be
-read as "not in". New code matches how the symbol is verbally expressed
-("contains as a member").</td>
-</tr>
-<tr>
-<td>Contains as member</td>
-<td>∋</td>
-<td>U+220B</td>
-<td><code>\ni</code></td>
-<td><code>\owns</code></td>
-<td>Current code (<code>\ni</code>) is counterintuitive as it could be
-read as "not in". This alternative is how it is frequently
-expressed.</td>
-</tr>
-<tr>
-<td>Power set</td>
-<td>℘</td>
-<td>U+2118</td>
-<td><code>\wp</code></td>
-<td><code>\powerset</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Set complement</td>
-<td>∁</td>
-<td>U+2201</td>
-<td>N/A</td>
-<td><code>\complement</code></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="number-theory">Number Theory</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Symbol</th>
-<th>Unicode Hex Value</th>
-<th>Existing Entry(s)</th>
-<th>Proposed New/Alternative(s)</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Divides; is divisible by</td>
-<td>∣</td>
-<td>U+2223</td>
-<td><code>\mid</code></td>
-<td><code>\divide</code></td>
-<td>This alias directly describes the meaning of the symbol, making it
-more intuitive, especially for users who may not be familiar with the
-existing <code>\mid</code> code.</td>
-</tr>
-<tr>
-<td>Does not divide; is not divisible by</td>
-<td>∤</td>
-<td>U+2224</td>
-<td>None</td>
-<td><code>\notdivide</code></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="logicboolean-operations">Logic/Boolean Operations</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Symbol</th>
-<th>Unicode Hex Value</th>
-<th>Existing Entry(s)</th>
-<th>Proposed New/Alternative(s)</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Conjunction (AND), logical AND</td>
-<td>∧</td>
-<td>U+2227</td>
-<td><code>\wedge</code></td>
-<td><code>\and</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Conjunction (AND), logical AND</td>
-<td>∧</td>
-<td>U+2227</td>
-<td><code>\wedge</code></td>
-<td><code>\land</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Disjunction (OR), logical OR</td>
-<td>∨</td>
-<td>U+2228</td>
-<td><code>\vee</code></td>
-<td><code>\or</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Disjunction (OR), logical OR</td>
-<td>∨</td>
-<td>U+2228</td>
-<td><code>\vee</code></td>
-<td><code>\lor</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Not AND (NAND)</td>
-<td>⊼</td>
-<td>U+22BC</td>
-<td>None</td>
-<td><code>\nand</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Not OR (NOR)</td>
-<td>⊽</td>
-<td>U+22BD</td>
-<td>None</td>
-<td><code>\nor</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Exclusive OR (XOR)</td>
-<td>⊕</td>
-<td>U+2295</td>
-<td><code>\oplus</code></td>
-<td><code>\xor</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Exclusive NOR (XNOR)</td>
-<td>⊙</td>
-<td>U+2299</td>
-<td><code>\odot</code></td>
-<td><code>\xnor</code></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="logic-proofs-and-reasoning">Logic Proofs and Reasoning</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Symbol</th>
-<th>Unicode Hex Value</th>
-<th>Existing Entry(s)</th>
-<th>Proposed New/Alternative(s)</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Proves</td>
-<td>⊢</td>
-<td>U+22A2</td>
-<td><code>\vdash</code></td>
-<td><code>\proves</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Tautology (Always True)</td>
-<td>⊤</td>
-<td>U+22A4</td>
-<td><code>\top</code></td>
-<td><code>\tautology</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Contradiction (Always False)</td>
-<td>⊥</td>
-<td>U+22A5</td>
-<td><code>\bot</code></td>
-<td><code>\false</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Contradiction (Always False)</td>
-<td>⊥</td>
-<td>U+22A5</td>
-<td><code>\bot</code></td>
-<td><code>\contradiction</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Implication (If...then)</td>
-<td>→</td>
-<td>U+2192</td>
-<td><code>\rightarrow</code></td>
-<td><code>\implication</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Implication (If...then)</td>
-<td>→</td>
-<td>U+2192</td>
-<td><code>\rightarrow</code></td>
-<td><code>\implies</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Biconditional (If and only if)</td>
-<td>↔︎</td>
-<td>U+2194</td>
-<td><code>\leftrightarrow</code></td>
-<td><code>\biconditional</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Implication, double arrow (If...then)</td>
-<td>⇒</td>
-<td>U+21D2</td>
-<td><code>\Rightarrow</code></td>
-<td><code>\Implication</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Implication, double arrow (If...then)</td>
-<td>⇒</td>
-<td>U+21D2</td>
-<td><code>\Rightarrow</code></td>
-<td><code>\Implies</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Biconditional, double arrow (If and only if)</td>
-<td>⇔</td>
-<td>U+21D4</td>
-<td><code>\Leftrightarrow</code></td>
-<td><code>\Biconditional</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Forces</td>
-<td>⊩</td>
-<td>U+22A9</td>
-<td>None</td>
-<td><code>\forces</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Entailment</td>
-<td>⊨</td>
-<td>U+22A8</td>
-<td><code>\models</code></td>
-<td><code>\entailment</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Entailment</td>
-<td>⊨</td>
-<td>U+22A8</td>
-<td><code>\models</code></td>
-<td><code>\true</code></td>
-<td></td>
-</tr>
-<tr>
-<td>For all</td>
-<td>∀</td>
-<td>U+2200</td>
-<td><code>\forall</code></td>
-<td><code>\foreach</code></td>
-<td>Matches common programming terminology and verbal description</td>
-</tr>
-<tr>
-<td>There exists</td>
-<td>∃</td>
-<td>U+2203</td>
-<td><code>\exists</code></td>
-<td><code>\forsome</code></td>
-<td>Matches common verbal description</td>
-</tr>
-</tbody>
-</table>
-<h2 id="statistics-and-probablility">Statistics and Probablility</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Symbol</th>
-<th>Unicode Hex Value</th>
-<th>Existing Entry(s)</th>
-<th>Proposed New/Alternative(s)</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Standard deviation</td>
-<td>σ</td>
-<td>U+03C3</td>
-<td><code>\sigma</code></td>
-<td><code>\stddev</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Population mean</td>
-<td>μ</td>
-<td>U+03BC</td>
-<td><code>\mu</code></td>
-<td><code>\mean</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Correlation coefficient</td>
-<td>ρ</td>
-<td>U+03C1</td>
-<td><code>\rho</code></td>
-<td><code>\corr</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Expected value</td>
-<td>𝔼</td>
-<td>U+1D53C</td>
-<td><code>\doubleE</code></td>
-<td><code>\expect</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Probability</td>
-<td>ℙ</td>
-<td>U+2119</td>
-<td><code>\doubleP</code></td>
-<td><code>\prob</code></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="matrix-operations">Matrix Operations</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Symbol</th>
-<th>Unicode Hex Value</th>
-<th>Existing Entry(s)</th>
-<th>Proposed New/Alternative(s)</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Kronecker product</td>
-<td>⊗</td>
-<td>U+2297</td>
-<td><code>\otimes</code></td>
-<td><code>\kron</code></td>
-<td>Used in matrix operations to denote the Kronecker (tensor)
-product</td>
-</tr>
-<tr>
-<td>Hadamard product</td>
-<td>⊙</td>
-<td>U+2299</td>
-<td><code>\odot</code></td>
-<td><code>\hadamard</code></td>
-<td>Element-wise multiplication of matrices of the same dimensions</td>
-</tr>
-<tr>
-<td>Adjoint/Hermitian transpose</td>
-<td>†</td>
-<td>U+2020</td>
-<td>None</td>
-<td><code>\adjoint</code></td>
-<td>Used for conjugate transpose in complex matrices</td>
-</tr>
-<tr>
-<td>Identity matrix</td>
-<td>𝐈</td>
-<td>U+1D408</td>
-<td>None</td>
-<td><code>\identity</code></td>
-<td>Represents the identity matrix, often denoted with bold I</td>
-</tr>
-<tr>
-<td>Direct sum</td>
-<td>⊕</td>
-<td>U+2295</td>
-<td><code>\oplus</code></td>
-<td><code>\directsum</code></td>
-<td>Used in block matrix operations</td>
-</tr>
-</tbody>
-</table>
+  <main>
+    <header id="title-block-header">
+      <h1 class="title">Proposed New Math AutoCorrect Codes for Commonly Used Math Symbols</h1>
+    </header>
+    <p>Math AutoCorrect codes allow users to type mathematical symbols in
+      MS Word by entering text codes which automatically convert to proper
+      math symbols. For example, \pi for the lowercase Greek pi character.
+      These codes provide a predictable, keyboard-based method to create
+      complex mathematical expressions through memorized text patterns
+      rather than having to locate symbols in menus or toolbars.
+    </p>
+    <p>This document proposes 101 new Math AutoCorrect codes for inclusion in Microsoft 365 applications (Word,
+      PowerPoint, OneNote, etc.). These recommendations from the DAISY Microsoft Word Accessibility project aim to
+      enhance mathematical content creation for all users, particularly those with visual impairments. The proposed
+      codes include:
+    </p>
+    <ol>
+      <li>New codes for common mathematical symbols currently lacking AutoCorrect shortcuts</li>
+      <li>More intuitive alternatives to existing codes (e.g., \union as a more memorable alternative to \cup for the
+        set union symbol)</li>
+    </ol>
+    <h2 id="relevant-discussions">Relevant Discussions</h1>
+      <p>This page is the product of the following two discussions:</p>
+      <ul>
+        <li><a href="https://github.com/daisy/math-a11y/discussions/25">Let's
+            Generate a List of Aliases for Existing Math AutoCorrect Codes</a></li>
+        <li><a href="https://github.com/daisy/math-a11y/discussions/26">Let's
+            Generate a List of Missing Math AutoCorrect Codes for Commonly Used
+            Symbols</a></li>
+      </ul>
+      <h2 id="how-to-read-these-tables">How to Read These Tables</h2>
+      <p>Each section contains a table organizing proposed new Math
+        AutoCorrect entries by mathematical category. The tables have six
+        columns:</p>
+      <ol type="1">
+        <li>Name - Description of the symbol</li>
+        <li>Symbol - The mathematical symbol as its Unicode character</li>
+        <li>Unicode Hex Value - The Unicode hexadecimal value for the
+          symbol</li>
+        <li>Existing Entries(s) - Current AutoCorrect entries(s) if any exist,
+          or "None" if the symbol has no current AutoCorrect entry</li>
+        <li>Proposed New Alternative - Proposed new or alternative
+          AutoCorrect entry</li>
+        <li>Notes - Additional context or important information</li>
+      </ol>
+      <p>For reference, there is a complete list of the MathAutoCorrect
+        shortcodes in MS Word 365 in the wiki: <a
+          href="https://github.com/daisy/math-a11y/wiki/Reference-List-Math-Autocorrect-Entries-in-MS-Word-365-(Alphabetical)">Reference
+          List Math Autocorrect Entries in MS Word 365 (Alphabetical)</a></p>
+
+      <h2 class="title">Proposed New Math AutoCorrect Codes</h2>
+
+      <h3 id="currency-symbols">Currency Symbols</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Symbol</th>
+            <th>Unicode Hex Value</th>
+            <th>Existing Entry(s)</th>
+            <th>Proposed New/Alternative</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="name">Cents sign</td>
+            <td class="symbol">¢</td>
+            <td class="unicodeValue">U+00A2</td>
+            <td class="existingCodes">None</td>
+            <td class="newCodes"><code>\cents</code></td>
+            <td class="notes">Commonly used to help young students understand money-related
+              arithmetic.</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3 id="numbers">Numbers</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Symbol</th>
+            <th>Unicode Hex Value</th>
+            <th>Existing Entry(s)</th>
+            <th>Proposed New Alternative</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="name">Repeating decimal</td>
+            <td class="symbol">¯</td>
+            <td class="unicodeValue">U+00AF</td>
+            <td class="existingCodes"><code>\overbar</code>, <code>\overline</code></td>
+            <td class="newCodes"><code>\repeat</code></td>
+            <td class="notes">Common in early algebra; current codes don't reflect mathematical
+              meaning</td>
+          </tr>
+          <tr>
+            <td class="name">Repeating decimal</td>
+            <td class="symbol">¯</td>
+            <td class="unicodeValue">U+00AF</td>
+            <td class="existingCodes"><code>\overbar</code>, <code>\overline</code></td>
+            <td class="newCodes"><code>\repeating</code></td>
+            <td class="notes">Common in early algebra; current codes don't reflect mathematical
+              meaning</td>
+          </tr>
+          <tr>
+            <td class="name">Repeating decimal</td>
+            <td class="symbol">¯</td>
+            <td class="unicodeValue">U+00AF</td>
+            <td class="existingCodes"><code>\overbar</code>, <code>\overline</code></td>
+            <td class="newCodes"><code>\vinculum</code></td>
+            <td class="notes">Common in early algebra; current codes don't reflect mathematical
+              meaning</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3 id="basic-symbols-and-operations">Basic Symbols and Operations</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Symbol</th>
+            <th>Unicode Hex Value</th>
+            <th>Existing Entry(s)</th>
+            <th>Proposed New/Alternative</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="name">Infinity</td>
+            <td class="symbol">∞</td>
+            <td class="unicodeValue">U+221E</td>
+            <td class="existingCodes"><code>\infty</code></td>
+            <td class="newCodes"><code>\infinity</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Square root</td>
+            <td class="symbol">√</td>
+            <td class="unicodeValue">U+221A</td>
+            <td class="existingCodes"><code>\sqrt</code></td>
+            <td class="newCodes"><code>\2root</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Cube root</td>
+            <td class="symbol">∛</td>
+            <td class="unicodeValue">U+221B</td>
+            <td class="existingCodes"><code>\cbrt</code></td>
+            <td class="newCodes"><code>\3root</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Fourth root</td>
+            <td class="symbol">∜</td>
+            <td class="unicodeValue">U+221C</td>
+            <td class="existingCodes"><code>\qdrt</code></td>
+            <td class="newCodes"><code>\4root</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Composition</td>
+            <td class="symbol">∘</td>
+            <td class="unicodeValue">U+2218</td>
+            <td class="existingCodes"><code>\circ</code></td>
+            <td class="newCodes"><code>\comp</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Degrees</td>
+            <td class="symbol">°</td>
+            <td class="unicodeValue">U+00B0</td>
+            <td class="existingCodes"><code>\degree</code></td>
+            <td class="newCodes"><code>\deg</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Radians</td>
+            <td class="symbol">㎭</td>
+            <td class="unicodeValue">U+33AD</td>
+            <td class="existingCodes">N\A</td>
+            <td class="newCodes"><code>\rad</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Join</td>
+            <td class="symbol">⋈</td>
+            <td class="unicodeValue">U+22C8</td>
+            <td class="existingCodes"><code>\bowtie</code></td>
+            <td class="newCodes"><code>\join</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">End of proof, QED</td>
+            <td class="symbol">∎</td>
+            <td class="unicodeValue">U+220E</td>
+            <td class="existingCodes">N/A</td>
+            <td class="newCodes"><code>\qed</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">End of proof, QED</td>
+            <td class="symbol">∎</td>
+            <td class="unicodeValue">U+220E</td>
+            <td class="existingCodes">N/A</td>
+            <td class="newCodes"><code>\endproof</code></td>
+            <td class="notes"></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3 id="geometry-and-measurement">Geometry and Measurement</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Symbol</th>
+            <th>Unicode Hex Value</th>
+            <th>Existing Entry(s)</th>
+            <th>Proposed New/Alternative</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="name">Circle</td>
+            <td class="symbol">◯</td>
+            <td class="unicodeValue">U+25EF</td>
+            <td class="existingCodes">None</td>
+            <td class="newCodes"><code>\circle</code></td>
+            <td class="notes">The circle symbol is larger than the letter O, but could possibly be
+              confused with the letter O. Note that <code>\odot</code> produces ⊙,
+              which is read as "circle dot operator."</td>
+          </tr>
+          <tr>
+            <td class="name">Circle with dot inside</td>
+            <td class="symbol">⊙</td>
+            <td class="unicodeValue">U+2299</td>
+            <td class="existingCodes"><code>\odot</code></td>
+            <td class="newCodes"><code>\circledot</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Line (combining left-right arrow above)</td>
+            <td class="symbol">⃡</td>
+            <td class="unicodeValue">U+20E1</td>
+            <td class="existingCodes"><code>\tvec</code></td>
+            <td class="newCodes"><code>\line</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Segment</td>
+            <td class="symbol">¯</td>
+            <td class="unicodeValue">U+00AF</td>
+            <td class="existingCodes"><code>\overbar</code>, <code>\overline</code></td>
+            <td class="newCodes"><code>\seg</code></td>
+            <td class="notes">Direct connection to mathematical terminology</td>
+          </tr>
+          <tr>
+            <td class="name">Measured angle</td>
+            <td class="symbol">∡</td>
+            <td class="unicodeValue">U+2221</td>
+            <td class="existingCodes">None</td>
+            <td class="newCodes"><code>\measangle</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Right angle</td>
+            <td class="symbol">∟</td>
+            <td class="unicodeValue">U+221F</td>
+            <td class="existingCodes">None</td>
+            <td class="newCodes"><code>\rightangle</code></td>
+            <td class="notes">This symbol does not appear in any of the galleries of Word's
+              equation toolbar.</td>
+          </tr>
+          <tr>
+            <td class="name">Triangle</td>
+            <td class="symbol">△</td>
+            <td class="unicodeValue">U+25B3</td>
+            <td class="existingCodes">None</td>
+            <td class="newCodes"><code>\triangle</code></td>
+            <td class="notes">This is read as "white up-pointing triangle."</td>
+          </tr>
+          <tr>
+            <td class="name">Parallelogram</td>
+            <td class="symbol">▱</td>
+            <td class="unicodeValue">U+25B1</td>
+            <td class="existingCodes"><code>\underline</code></td>
+            <td class="newCodes"><code>\parallelogram</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Not parallel to</td>
+            <td class="symbol">∦</td>
+            <td class="unicodeValue">U+2226</td>
+            <td class="existingCodes">N/A</td>
+            <td class="newCodes"><code>\notparallel</code></td>
+            <td class="notes">Using <code>/\parallel</code> does not work.</td>
+          </tr>
+          <tr>
+            <td class="name">Ray (combining right arrow above)</td>
+            <td class="symbol">⃗</td>
+            <td class="unicodeValue">U+20D7</td>
+            <td class="existingCodes"><code>\vec</code></td>
+            <td class="newCodes"><code>\ray</code></td>
+            <td class="notes">Students learn rays before vectors in geometry; current code creates
+              unnecessary cognitive load by using vector terminology for a basic
+              geometric concept</td>
+          </tr>
+          <tr>
+            <td class="name">Arc</td>
+            <td class="symbol">⏜</td>
+            <td class="unicodeValue">U+23DC</td>
+            <td class="existingCodes"><code>\overparen</code></td>
+            <td class="newCodes"><code>\arc</code></td>
+            <td class="notes">Current code reflects shape rather than mathematical meaning; new
+              code matches standard geometric terminology and verbal expression</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3 id="inequalities-and-relations">Inequalities and Relations</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Symbol</th>
+            <th>Unicode Hex Value</th>
+            <th>Existing Entry(s)</th>
+            <th>Proposed New/Alternative</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="name">Not less than</td>
+            <td class="symbol">≮</td>
+            <td class="unicodeValue">U+226E</td>
+            <td class="existingCodes"><code>/&lt;</code></td>
+            <td class="newCodes"><code>\nlt</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Not less than</td>
+            <td class="symbol">≮</td>
+            <td class="unicodeValue">U+226E</td>
+            <td class="existingCodes"><code>/&lt;</code></td>
+            <td class="newCodes"><code>\notlt</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Not greater than</td>
+            <td class="symbol">≯</td>
+            <td class="unicodeValue">U+226F</td>
+            <td class="existingCodes"><code>/&gt;</code></td>
+            <td class="newCodes"><code>\ngt</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Not greater than</td>
+            <td class="symbol">≯</td>
+            <td class="unicodeValue">U+226F</td>
+            <td class="existingCodes"><code>/&gt;</code></td>
+            <td class="newCodes"><code>\notgt</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Neither less than nor equal to</td>
+            <td class="symbol">≰</td>
+            <td class="unicodeValue">U+2270</td>
+            <td class="existingCodes"><code>/\le</code></td>
+            <td class="newCodes"><code>\nleq</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Neither less than nor equal to</td>
+            <td class="symbol">≰</td>
+            <td class="unicodeValue">U+2270</td>
+            <td class="existingCodes"><code>/\le</code></td>
+            <td class="newCodes"><code>\notle</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Neither greater than nor equal to</td>
+            <td class="symbol">≱</td>
+            <td class="unicodeValue">U+2271</td>
+            <td class="existingCodes"><code>/\ge</code></td>
+            <td class="newCodes"><code>\nge</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Neither greater than nor equal to</td>
+            <td class="symbol">≱</td>
+            <td class="unicodeValue">U+2271</td>
+            <td class="existingCodes"><code>/\ge</code></td>
+            <td class="newCodes"><code>\notge</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Neither greater than nor equal to</td>
+            <td class="symbol">≱</td>
+            <td class="unicodeValue">U+2271</td>
+            <td class="existingCodes"><code>/\ge</code></td>
+            <td class="newCodes"><code>\ngeq</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Neither greater than nor equal to</td>
+            <td class="symbol">≱</td>
+            <td class="unicodeValue">U+2271</td>
+            <td class="existingCodes"><code>/\ge</code></td>
+            <td class="newCodes"><code>\notgeq</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Logical not</td>
+            <td class="symbol">¬</td>
+            <td class="unicodeValue">U+00AC</td>
+            <td class="existingCodes"><code>\neg</code></td>
+            <td class="newCodes"><code>\not</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Much greater than</td>
+            <td class="symbol">≫</td>
+            <td class="unicodeValue">U+226B</td>
+            <td class="existingCodes"><code>\gg</code></td>
+            <td class="newCodes"><code>\muchgreater</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Much less than</td>
+            <td class="symbol">≪</td>
+            <td class="unicodeValue">U+226A</td>
+            <td class="existingCodes"><code>\ll</code></td>
+            <td class="newCodes"><code>\muchless</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Not almost equal to</td>
+            <td class="symbol">≉</td>
+            <td class="unicodeValue">U+2249</td>
+            <td class="existingCodes"><code>/\approx</code></td>
+            <td class="newCodes"><code>\notapprox</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Not congruent to</td>
+            <td class="symbol">≇</td>
+            <td class="unicodeValue">U+2247</td>
+            <td class="existingCodes"><code>/\cong</code></td>
+            <td class="newCodes"><code>\notcong</code></td>
+            <td class="notes"></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3 id="calculus">Calculus</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Symbol</th>
+            <th>Unicode Hex Value</th>
+            <th>Existing Entry(s)</th>
+            <th>Proposed New Alternative</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="name">Double integral</td>
+            <td class="symbol">∬</td>
+            <td class="unicodeValue">U+222C</td>
+            <td class="existingCodes"><code>\iint</code></td>
+            <td class="newCodes"><code>\doubleint</code></td>
+            <td class="notes">More intuitive than repeating the letter</td>
+          </tr>
+          <tr>
+            <td class="name">Triple integral</td>
+            <td class="symbol">∭</td>
+            <td class="unicodeValue">U+222D</td>
+            <td class="existingCodes"><code>\iiint</code></td>
+            <td class="newCodes"><code>\tripleint</code></td>
+            <td class="notes">More intuitive than repeating the letter</td>
+          </tr>
+          <tr>
+            <td class="name">Double prime</td>
+            <td class="symbol">″</td>
+            <td class="unicodeValue">U+2033</td>
+            <td class="existingCodes"><code>\pprime</code></td>
+            <td class="newCodes"><code>\dprime</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Double prime</td>
+            <td class="symbol">″</td>
+            <td class="unicodeValue">U+2033</td>
+            <td class="existingCodes"><code>\pprime</code></td>
+            <td class="newCodes"><code>\doubleprime</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Triple prime</td>
+            <td class="symbol">‴</td>
+            <td class="unicodeValue">U+2034</td>
+            <td class="existingCodes"><code>\ppprime</code></td>
+            <td class="newCodes"><code>\tprime</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Triple prime</td>
+            <td class="symbol">‴</td>
+            <td class="unicodeValue">U+2034</td>
+            <td class="existingCodes"><code>\ppprime</code></td>
+            <td class="newCodes"><code>\tripleprime</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Quadruple prime</td>
+            <td class="symbol">⁗</td>
+            <td class="unicodeValue">U+2057</td>
+            <td class="existingCodes"><code>\pppprime</code></td>
+            <td class="newCodes"><code>\qprime</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Quadruple prime</td>
+            <td class="symbol">⁗</td>
+            <td class="unicodeValue">U+2057</td>
+            <td class="existingCodes"><code>\pppprime</code></td>
+            <td class="newCodes"><code>\quadprime</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Nabla/Gradient</td>
+            <td class="symbol">∇</td>
+            <td class="unicodeValue">U+2207</td>
+            <td class="existingCodes"><code>\nabla</code></td>
+            <td class="newCodes"><code>\grad</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Laplacian</td>
+            <td class="symbol">∆</td>
+            <td class="unicodeValue">U+2206</td>
+            <td class="existingCodes"><code>\inc</code></td>
+            <td class="newCodes"><code>\laplace</code></td>
+            <td class="notes"></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3 id="set-theory">Set Theory</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Symbol</th>
+            <th>Unicode Hex Value</th>
+            <th>Existing Entry(s)</th>
+            <th>Proposed New/Alternative</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="name">Union</td>
+            <td class="symbol">∪</td>
+            <td class="unicodeValue">U+222A</td>
+            <td class="existingCodes"><code>\cup</code></td>
+            <td class="newCodes"><code>\union</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Union</td>
+            <td class="symbol">⋃</td>
+            <td class="unicodeValue">U+22C3</td>
+            <td class="existingCodes"><code>\bigcup</code></td>
+            <td class="newCodes"><code>\Union</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Intersection</td>
+            <td class="symbol">∩</td>
+            <td class="unicodeValue">U+2229</td>
+            <td class="existingCodes"><code>\cap</code></td>
+            <td class="newCodes"><code>\intersection</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Intersection</td>
+            <td class="symbol">⋂</td>
+            <td class="unicodeValue">U+22C2</td>
+            <td class="existingCodes"><code>\bigcap</code></td>
+            <td class="newCodes"><code>\Intersection</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Not a subset of</td>
+            <td class="symbol">⊄</td>
+            <td class="unicodeValue">U+2284</td>
+            <td class="existingCodes"><code>/\subset</code></td>
+            <td class="newCodes"><code>\notsubset</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Not a superset of</td>
+            <td class="symbol">⊅</td>
+            <td class="unicodeValue">U+2285</td>
+            <td class="existingCodes"><code>/\superset</code></td>
+            <td class="newCodes"><code>\notsuperset</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Neither a subset of nor equal to</td>
+            <td class="symbol">⊈</td>
+            <td class="unicodeValue">U+2288</td>
+            <td class="existingCodes"><code>/\subseteq</code></td>
+            <td class="newCodes"><code>\notsubseteq</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Neither a superset of nor equal to</td>
+            <td class="symbol">⊉</td>
+            <td class="unicodeValue">U+2289</td>
+            <td class="existingCodes"><code>/\superseteq</code></td>
+            <td class="newCodes"><code>\notsuperseteq</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Subset of with not equal to</td>
+            <td class="symbol">⊊</td>
+            <td class="unicodeValue">U+228A</td>
+            <td class="existingCodes">None</td>
+            <td class="newCodes"><code>\subsetnoteq</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Superset of with not equal to</td>
+            <td class="symbol">⊋</td>
+            <td class="unicodeValue">U+228B</td>
+            <td class="existingCodes">None</td>
+            <td class="newCodes"><code>\supersetnoteq</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Element of; belongs to</td>
+            <td class="symbol">∈</td>
+            <td class="unicodeValue">U+2208</td>
+            <td class="existingCodes"><code>\in</code></td>
+            <td class="newCodes"><code>\belongs</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Element of; belongs to</td>
+            <td class="symbol">∈</td>
+            <td class="unicodeValue">U+2208</td>
+            <td class="existingCodes"><code>\in</code></td>
+            <td class="newCodes"><code>\element</code></td>
+            <td class="notes">Pairs with <code>\notelement</code></td>
+          </tr>
+          <tr>
+            <td class="name">Contains as member</td>
+            <td class="symbol">∋</td>
+            <td class="unicodeValue">U+220B</td>
+            <td class="existingCodes"><code>\ni</code></td>
+            <td class="newCodes"><code>\contains</code></td>
+            <td class="notes">Current code (<code>\ni</code>) is counterintuitive as it could be
+              read as "not in". New code matches how the symbol is verbally expressed
+              ("contains as a member").</td>
+          </tr>
+          <tr>
+            <td class="name">Contains as member</td>
+            <td class="symbol">∋</td>
+            <td class="unicodeValue">U+220B</td>
+            <td class="existingCodes"><code>\ni</code></td>
+            <td class="newCodes"><code>\owns</code></td>
+            <td class="notes">Current code (<code>\ni</code>) is counterintuitive as it could be
+              read as "not in". This alternative is how it is frequently
+              expressed.</td>
+          </tr>
+          <tr>
+            <td class="name">Power set</td>
+            <td class="symbol">℘</td>
+            <td class="unicodeValue">U+2118</td>
+            <td class="existingCodes"><code>\wp</code></td>
+            <td class="newCodes"><code>\powerset</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Set complement</td>
+            <td class="symbol">∁</td>
+            <td class="unicodeValue">U+2201</td>
+            <td class="existingCodes">N/A</td>
+            <td class="newCodes"><code>\complement</code></td>
+            <td class="notes"></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3 id="number-theory">Number Theory</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Symbol</th>
+            <th>Unicode Hex Value</th>
+            <th>Existing Entry(s)</th>
+            <th>Proposed New/Alternative</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="name">Divides; is divisible by</td>
+            <td class="symbol">∣</td>
+            <td class="unicodeValue">U+2223</td>
+            <td class="existingCodes"><code>\mid</code></td>
+            <td class="newCodes"><code>\divide</code></td>
+            <td class="notes">This alias directly describes the meaning of the symbol, making it
+              more intuitive, especially for users who may not be familiar with the
+              existing <code>\mid</code> code.</td>
+          </tr>
+          <tr>
+            <td class="name">Does not divide; is not divisible by</td>
+            <td class="symbol">∤</td>
+            <td class="unicodeValue">U+2224</td>
+            <td class="existingCodes">None</td>
+            <td class="newCodes"><code>\notdivide</code></td>
+            <td class="notes"></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3 id="logicboolean-operations">Logic/Boolean Operations</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Symbol</th>
+            <th>Unicode Hex Value</th>
+            <th>Existing Entry(s)</th>
+            <th>Proposed New/Alternative</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="name">Conjunction (AND), logical AND</td>
+            <td class="symbol">∧</td>
+            <td class="unicodeValue">U+2227</td>
+            <td class="existingCodes"><code>\wedge</code></td>
+            <td class="newCodes"><code>\and</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Conjunction (AND), logical AND</td>
+            <td class="symbol">∧</td>
+            <td class="unicodeValue">U+2227</td>
+            <td class="existingCodes"><code>\wedge</code></td>
+            <td class="newCodes"><code>\land</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Disjunction (OR), logical OR</td>
+            <td class="symbol">∨</td>
+            <td class="unicodeValue">U+2228</td>
+            <td class="existingCodes"><code>\vee</code></td>
+            <td class="newCodes"><code>\or</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Disjunction (OR), logical OR</td>
+            <td class="symbol">∨</td>
+            <td class="unicodeValue">U+2228</td>
+            <td class="existingCodes"><code>\vee</code></td>
+            <td class="newCodes"><code>\lor</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Not AND (NAND)</td>
+            <td class="symbol">⊼</td>
+            <td class="unicodeValue">U+22BC</td>
+            <td class="existingCodes">None</td>
+            <td class="newCodes"><code>\nand</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Not OR (NOR)</td>
+            <td class="symbol">⊽</td>
+            <td class="unicodeValue">U+22BD</td>
+            <td class="existingCodes">None</td>
+            <td class="newCodes"><code>\nor</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Exclusive OR (XOR)</td>
+            <td class="symbol">⊕</td>
+            <td class="unicodeValue">U+2295</td>
+            <td class="existingCodes"><code>\oplus</code></td>
+            <td class="newCodes"><code>\xor</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Exclusive NOR (XNOR)</td>
+            <td class="symbol">⊙</td>
+            <td class="unicodeValue">U+2299</td>
+            <td class="existingCodes"><code>\odot</code></td>
+            <td class="newCodes"><code>\xnor</code></td>
+            <td class="notes"></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3 id="logic-proofs-and-reasoning">Logic Proofs and Reasoning</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Symbol</th>
+            <th>Unicode Hex Value</th>
+            <th>Existing Entry(s)</th>
+            <th>Proposed New/Alternative</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="name">Proves</td>
+            <td class="symbol">⊢</td>
+            <td class="unicodeValue">U+22A2</td>
+            <td class="existingCodes"><code>\vdash</code></td>
+            <td class="newCodes"><code>\proves</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Tautology (Always True)</td>
+            <td class="symbol">⊤</td>
+            <td class="unicodeValue">U+22A4</td>
+            <td class="existingCodes"><code>\top</code></td>
+            <td class="newCodes"><code>\tautology</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Contradiction (Always False)</td>
+            <td class="symbol">⊥</td>
+            <td class="unicodeValue">U+22A5</td>
+            <td class="existingCodes"><code>\bot</code></td>
+            <td class="newCodes"><code>\false</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Contradiction (Always False)</td>
+            <td class="symbol">⊥</td>
+            <td class="unicodeValue">U+22A5</td>
+            <td class="existingCodes"><code>\bot</code></td>
+            <td class="newCodes"><code>\contradiction</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Implication (If...then)</td>
+            <td class="symbol">→</td>
+            <td class="unicodeValue">U+2192</td>
+            <td class="existingCodes"><code>\rightarrow</code></td>
+            <td class="newCodes"><code>\implication</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Implication (If...then)</td>
+            <td class="symbol">→</td>
+            <td class="unicodeValue">U+2192</td>
+            <td class="existingCodes"><code>\rightarrow</code></td>
+            <td class="newCodes"><code>\implies</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Biconditional (If and only if)</td>
+            <td class="symbol">↔︎</td>
+            <td class="unicodeValue">U+2194</td>
+            <td class="existingCodes"><code>\leftrightarrow</code></td>
+            <td class="newCodes"><code>\biconditional</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Implication, double arrow (If...then)</td>
+            <td class="symbol">⇒</td>
+            <td class="unicodeValue">U+21D2</td>
+            <td class="existingCodes"><code>\Rightarrow</code></td>
+            <td class="newCodes"><code>\Implication</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Implication, double arrow (If...then)</td>
+            <td class="symbol">⇒</td>
+            <td class="unicodeValue">U+21D2</td>
+            <td class="existingCodes"><code>\Rightarrow</code></td>
+            <td class="newCodes"><code>\Implies</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Biconditional, double arrow (If and only if)</td>
+            <td class="symbol">⇔</td>
+            <td class="unicodeValue">U+21D4</td>
+            <td class="existingCodes"><code>\Leftrightarrow</code></td>
+            <td class="newCodes"><code>\Biconditional</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Forces</td>
+            <td class="symbol">⊩</td>
+            <td class="unicodeValue">U+22A9</td>
+            <td class="existingCodes">None</td>
+            <td class="newCodes"><code>\forces</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Entailment</td>
+            <td class="symbol">⊨</td>
+            <td class="unicodeValue">U+22A8</td>
+            <td class="existingCodes"><code>\models</code></td>
+            <td class="newCodes"><code>\entailment</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Entailment</td>
+            <td class="symbol">⊨</td>
+            <td class="unicodeValue">U+22A8</td>
+            <td class="existingCodes"><code>\models</code></td>
+            <td class="newCodes"><code>\true</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">For all</td>
+            <td class="symbol">∀</td>
+            <td class="unicodeValue">U+2200</td>
+            <td class="existingCodes"><code>\forall</code></td>
+            <td class="newCodes"><code>\foreach</code></td>
+            <td class="notes">Matches common programming terminology and verbal description</td>
+          </tr>
+          <tr>
+            <td class="name">There exists</td>
+            <td class="symbol">∃</td>
+            <td class="unicodeValue">U+2203</td>
+            <td class="existingCodes"><code>\exists</code></td>
+            <td class="newCodes"><code>\forsome</code></td>
+            <td class="notes">Matches common verbal description</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3 id="statistics-and-probablility">Statistics and Probablility</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Symbol</th>
+            <th>Unicode Hex Value</th>
+            <th>Existing Entry(s)</th>
+            <th>Proposed New/Alternative</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="name">Standard deviation</td>
+            <td class="symbol">σ</td>
+            <td class="unicodeValue">U+03C3</td>
+            <td class="existingCodes"><code>\sigma</code></td>
+            <td class="newCodes"><code>\stddev</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Population mean</td>
+            <td class="symbol">μ</td>
+            <td class="unicodeValue">U+03BC</td>
+            <td class="existingCodes"><code>\mu</code></td>
+            <td class="newCodes"><code>\mean</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Correlation coefficient</td>
+            <td class="symbol">ρ</td>
+            <td class="unicodeValue">U+03C1</td>
+            <td class="existingCodes"><code>\rho</code></td>
+            <td class="newCodes"><code>\corr</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Expected value</td>
+            <td class="symbol">𝔼</td>
+            <td class="unicodeValue">U+1D53C</td>
+            <td class="existingCodes"><code>\doubleE</code></td>
+            <td class="newCodes"><code>\expect</code></td>
+            <td class="notes"></td>
+          </tr>
+          <tr>
+            <td class="name">Probability</td>
+            <td class="symbol">ℙ</td>
+            <td class="unicodeValue">U+2119</td>
+            <td class="existingCodes"><code>\doubleP</code></td>
+            <td class="newCodes"><code>\prob</code></td>
+            <td class="notes"></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3 id="matrix-operations">Matrix Operations</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Symbol</th>
+            <th>Unicode Hex Value</th>
+            <th>Existing Entry(s)</th>
+            <th>Proposed New/Alternative</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="name">Kronecker product</td>
+            <td class="symbol">⊗</td>
+            <td class="unicodeValue">U+2297</td>
+            <td class="existingCodes"><code>\otimes</code></td>
+            <td class="newCodes"><code>\kron</code></td>
+            <td class="notes">Used in matrix operations to denote the Kronecker (tensor)
+              product</td>
+          </tr>
+          <tr>
+            <td class="name">Hadamard product</td>
+            <td class="symbol">⊙</td>
+            <td class="unicodeValue">U+2299</td>
+            <td class="existingCodes"><code>\odot</code></td>
+            <td class="newCodes"><code>\hadamard</code></td>
+            <td class="notes">Element-wise multiplication of matrices of the same dimensions</td>
+          </tr>
+          <tr>
+            <td class="name">Adjoint/Hermitian transpose</td>
+            <td class="symbol">†</td>
+            <td class="unicodeValue">U+2020</td>
+            <td class="existingCodes">None</td>
+            <td class="newCodes"><code>\adjoint</code></td>
+            <td class="notes">Used for conjugate transpose in complex matrices</td>
+          </tr>
+          <tr>
+            <td class="name">Identity matrix</td>
+            <td class="symbol">𝐈</td>
+            <td class="unicodeValue">U+1D408</td>
+            <td class="existingCodes">None</td>
+            <td class="newCodes"><code>\identity</code></td>
+            <td class="notes">Represents the identity matrix, often denoted with bold I</td>
+          </tr>
+          <tr>
+            <td class="name">Direct sum</td>
+            <td class="symbol">⊕</td>
+            <td class="unicodeValue">U+2295</td>
+            <td class="existingCodes"><code>\oplus</code></td>
+            <td class="newCodes"><code>\directsum</code></td>
+            <td class="notes">Used in block matrix operations</td>
+          </tr>
+        </tbody>
+      </table>
+  </main>
 </body>
+
 </html>
