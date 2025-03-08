@@ -1,0 +1,8 @@
+The PowerShell script has no external dependencies. It can be run in Windows Powershell using the command:
+.\addmathcodes.ps1
+
+To build the script into an executable, you can do the following:
+Step 1: grab the PS2EXE utility (only need to do this once)
+Install-Module -Name PS2EXE -Scope CurrentUser
+Step 2: build the exe using the filename of the script and the filename of the desired executable
+ps2exe addmathcodes.ps1 addmathcodes.exe -noConsole
