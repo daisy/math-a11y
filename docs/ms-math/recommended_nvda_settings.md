@@ -9,52 +9,26 @@ screen reader users. To avoid stumbling across known limitations in
 screen readers, please use the following:
 
 - Windows 10 or Windows 11
-- NVDA Version 2024.2 (2024.2.0.32555) or later
-- MathCAT 0.5.6 or later
+- NVDA Version 2025.1 or later.
+- MathCAT 0.6.10 or later
 
 # NVDA Settings
 
 ## Choosing your Voice Synthesizer:
 
 There are usually at least three choices: eSpeak NG, Microsoft Speech
-API, Windows OneCore voices. All synthesizers work, but the Windows
-OneCore voices don’t support speaking “a” properly and the other options
-should be used. In particular, the Microsoft Speech API is a good
-substitute for the OneCore voices.
-
-To change this:
-
-1.  Open NVDA
-2.  Start NVDA
-3.  Use the NVDA Key + n to bring up the NVDA Menu
-    1.  The NVDA Key is usually the INS key
-    2.  Alternatively, use the mouse to find the NVDA icon in the
-        toolbar. Note that the NVDA icon might be hidden. Use the show
-        hidden icons option to bring it up
-4.  Select Preferences from the NVDA Menu
-5.  Select Settings...
-6.  Go to Speech
-7.  The Windows OneCore voice will be the default under synthesizer,
-    activate the Change button
-8.  Select Microsoft Speech API version x (as of the time of writing
-    this document, version 5 is the latest)
-9.  Activate the "OK" button
-10. Activate the "Apply" button
-11. Activate the "OK" button to close the dialog
+API, and Windows OneCore voices. All synthesizers work.
 
 # Installing MathCAT Add-on:
 
-1.  Go to: [MathCAT Add-on
-    Page](https://addons.nvda-project.org/addons/MathCAT.en.html)
-2.  Activate the “Stable Version” link. This should be the 3<sup>rd</sup>
-    bullet that reads "Download Stable Version".
-3.  Find the file you downloaded and open it. A dialogue should come up
-    that says:  
-    “Are you sure you want to install this add-on? Only install add-ons
-    from trusted sources. Addon: MathCAT: speech and Braille from
-    MathML”
-4.  Select “Yes”
-5.  NVDA will ask you to restart, select “Yes”
+1.   Open NVDA settings with NVDA key + n and arrow down to the  Tools menu and press enter.
+2. Arrow don to the Ad-on store and press enter.
+  3. Press shift  tab untill you get to the installed Add-ons and arrow over to the Available Add-ons.
+  4. Press tab untill you get to the Search field and type in MathCAT and press enter.
+  6. Press enter and confirm that you want to install.
+  7. The MathCAT Add-on will be downloaded and installed.
+   8.  NVDA will ask you to restart, select “Yes”
+9. NVDA will restart with MathCAT enabled.
 
 # Accessing the MathCAT settings
 
