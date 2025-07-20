@@ -2,8 +2,8 @@ For the Equations in Microsoft Word Usability Walk-through, please use
 the following NVDA and MathCAT settings if possible.
 
 For NVDA to work with digital math content, it needs to have an add-on
-installed. The best addon for speaking math and creating math braille
-codes in Nemeth or UEB is the MathCAT plug-in. This group’s efforts are
+installed. The best add-on for speaking math and creating math braille
+codes in Nemeth or UEB is the MathCATAdd-on. This group’s efforts are
 focused on evaluating how well the Microsoft Equations work in Word for
 screen reader users. To avoid stumbling across known limitations in
 screen readers, please use the following:
@@ -39,15 +39,17 @@ To open the MathCAT Preferences dialog in NVDA:
 
 1.  Start NVDA
 2.  Use the NVDA Key + n to bring up the NVDA Menu.
-    1.  The NVDA Key is usually the INS key.
+    1.  The NVDA Key is usually the Caps lock and the INS key.
     2.  Alternatively, if using the mouse to find the NVDA icon in the
         toolbar. Note that the NVDA icon might be hidden. Use the show
         hidden icons option to bring it up.
 3.  Select "Preferences" from the NVDA Menu
-4.  Select “MathCAT Settings...”
+4.  Select “MathCAT Settings...” and press enter.
 
 The MathCAT Preferences dialog has three categories of settings: Speech,
-Navigation, and Braille. We are interested in setting the Speech and
+Navigation, and Braille.  To move between these three collection of settings, use CTRL + tab to cycle through the options.
+
+Below are the suggested Speech and
 Navigation settings:
 
 ## Speech Category Settings:
@@ -55,8 +57,14 @@ Navigation settings:
 | Setting                       | Set to                 |
 |-------------------------------|------------------------|
 | Generate Speech for           | Blindness \[Default\]  |
+| Language | auto |
+| Decimal separator for numbers | Auto|
 | Speech Style                  | ClearSpeak \[Default\] |
 | Speech Verbosity              | Verbose                |
+| Relative speech rate | Set slider lower to slow down speech |
+| Pause factor | slider  to pause between items |
+| Make a sound when starting/ending math  | check box |
+| Subject area to be used when it cannot be determined  | General |
 | Speech for chemical equations | Off (H sub 2 O)        |
 
 ## Navigation Category Settings:
