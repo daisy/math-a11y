@@ -1,9 +1,9 @@
-For the Equations in Microsoft Word Usability Walk-through, please use
+For the Equations in Microsoft Word , please use
 the following NVDA and MathCAT settings if possible.
 
 For NVDA to work with digital math content, it needs to have an add-on
 installed. The best add-on for speaking math and creating math braille
-codes in Nemeth or UEB is the MathCATAdd-on. This group’s efforts are
+codes in Nemeth or UEB is the MathCATAdd-on. The DAISY/Math-a11y group’s efforts are
 focused on evaluating how well the Microsoft Equations work in Word for
 screen reader users. To avoid stumbling across known limitations in
 screen readers, please use the following:
@@ -23,8 +23,8 @@ API, and Windows OneCore voices. All synthesizers work.
 
 1.   Open NVDA settings with NVDA key + n and arrow down to the  Tools menu and press enter.
 2. Arrow don to the Ad-on store and press enter.
-  3. Press shift  tab untill you get to the installed Add-ons and arrow over to the Available Add-ons.
-  4. Press tab untill you get to the Search field and type in MathCAT and press enter.
+  3. Press shift  tab until you get to the installed Add-ons and arrow over to the Available Add-ons.
+  4. Press tab until you get to the Search field and type in MathCAT and press enter.
   6. Press enter and confirm that you want to install.
   7. The MathCAT Add-on will be downloaded and installed.
    8.  NVDA will ask you to restart, select “Yes”
@@ -47,7 +47,7 @@ To open the MathCAT Preferences dialog in NVDA:
 4.  Select “MathCAT Settings...” and press enter.
 
 The MathCAT Preferences dialog has three categories of settings: Speech,
-Navigation, and Braille.  To move between these three collection of settings, use CTRL + tab to cycle through the options.
+Navigation, and Braille.  To move between these three collection of settings, use CTRL + tab to cycle through them. Use tab to move through the options, and arrow keys to make a selection.
 
 Below are the suggested Speech and
 Navigation settings:
@@ -73,7 +73,7 @@ Navigation settings:
 |----|----|
 | Navigation mode | Enhanced \[Default\] |
 | Navigation speech to use when beginning to navigate an equation | Speak \[Default\] |
-| Speech amount for navigation | Verbose |
+| Speech amount for navigation | medium |
 | Copy math as | MathML |
 
 # Navigating Math with MathCAT
