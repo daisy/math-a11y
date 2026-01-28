@@ -27,6 +27,8 @@ We will be  making changes in the options and in the Word equation editor settin
 * Check -Replace text as you type.
 This makes typing math much faster and avoids hunting through menus. If this interferes with your screen reader, you can leave it unchecked.
 
+NOTE: You must press OK, which can be found at the end of the settings. You can also move to the main list of options and shift + tab to quickly reach the OK button. You must press the OK button when exiting the options to save them.
+
 ##  Structural navigation for reading math in context 
 
 1.  Press Alt + F to open File.
