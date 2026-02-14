@@ -1,7 +1,7 @@
 For the Equations in Microsoft Word , please use
 the following NVDA and MathCAT settings if possible.
 
-For NVDA to work with digital math content, it needs to have an add-on
+For NVDA prior to 2026.1, to work with digital math content, it needs to have an add-on
 installed. The best add-on for speaking math and creating math braille
 codes in Nemeth or UEB is the MathCATAdd-on. The DAISY/Math-a11y group’s efforts are
 focused on evaluating how well the Microsoft Equations work in Word for
@@ -9,7 +9,8 @@ screen reader users. To avoid stumbling across known limitations in
 screen readers, please use the following:
 
 - Windows 10 or Windows 11
-- NVDA Version 2025.1 or later.
+- NVDA 2026.1 or later, includes MathCAT and no need for an add-in
+- NVDA Version 2025.3.2  or earlier.
 - MathCAT 0.6.10 or later
 
 # NVDA Settings
@@ -20,7 +21,7 @@ There are usually at least three choices: eSpeak NG, Microsoft Speech
 API, and Windows OneCore voices. All synthesizers work.
 
 # Installing MathCAT Add-on:
-
+Note: This step is not needed if using NVDA 2026.1 , because MathCAT is included in the core of NVDA.or later. 
 1.   Open NVDA settings with NVDA key + n and arrow down to the  Tools menu and press enter.
 2. Arrow don to the Ad-on store and press enter.
   3. Press shift  tab until you get to the installed Add-ons and arrow over to the Available Add-ons.
@@ -44,7 +45,8 @@ To open the MathCAT Preferences dialog in NVDA:
         toolbar. Note that the NVDA icon might be hidden. Use the show
         hidden icons option to bring it up.
 3.  Select "Preferences" from the NVDA Menu
-4.  Select “MathCAT Settings...” and press enter.
+4.  If using NVDA 2025.3.2 or earlier, Select “MathCAT Settings...” and press enter.
+If using NVDA 2026.1 or later, press settings and arrow down to MathCAT settings.
 
 The MathCAT Preferences dialog has three categories of settings: Speech,
 Navigation, and Braille.  To move between these three collection of settings, use CTRL + tab to cycle through them. Use tab to move through the options, and arrow keys to make a selection.
