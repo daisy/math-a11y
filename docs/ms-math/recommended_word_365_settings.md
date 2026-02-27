@@ -6,10 +6,10 @@ People who use screen readers can create mathematical  expressions by using line
 
 Most global Word Options apply to all new documents you create.
 When you change settings in File > Options, you’re typically adjusting application‑wide preferences. These include things like:
- • Proofing settings (AutoCorrect, spelling/grammar options)
- • Save settings (default file format, AutoRecover intervals)
- • Display settings
- • Advanced editing behavior
+ * Proofing settings (AutoCorrect, spelling/grammar options)
+ * Save settings (default file format, AutoRecover intervals)
+ * Display settings
+  Advanced editing behavior
  • Accessibility options
 These are stored in your user profile (usually in the Windows registry and/or the Normal template, depending on the setting).
 
@@ -35,7 +35,7 @@ NOTE: You must press OK, which can be found at the end of the settings. You can 
 2. Press T for Options.
 3.  Arrow down toAdvanced.
 4. Tab into advanced and find Show document content:
-*Check - Show bookmarks
+*uncheck - Show bookmarks
 * Uncheck - Show field codes instead of their values. (Field codes interfere with math reading)
 5.	Under Editing options:
 * check - Use smart cut and paste
@@ -44,14 +44,26 @@ These don’t change math itself, but they prevent Word from collapsing math int
 ## Disable visual-only math features that confuse screen readers
 
 While in the Word options enter the Display:
-• uncheck- Show text wrapped within the document window
-•uncheck - Show animations in the document
+* uncheck- Show text wrapped within the document window
+*uncheck - Show animations in the document
 This reduces cursor jumps when a screen reader is tracking math expressions.
+
+## Enable feedback with sound
+While in the options enter accessibility:
+
+* check  provide feedback with sound
+*select modern
+
+Most people prefer the modern sound scheme over the classic.
+
+You will be able to hear a sound when entering and exiting an equation.
+
+Note: Do not forget to press OK before you exit the options
 
 ## Equation editing options
 
 In the main body of the blank Word document, type alt + "=" (Alt plus the equal symbol.).
-This places you inside the Word equation editing field. Type \sqrt 4 = 2.
+This places you inside the Word equation editing field. Type \sqrt 4 = 2. Notice that \sqrt becomes the square root symbol.
 
 Now press alt and you will be taken to the equation tab. Press down arrow  and you will be in the options.
 Right arrow and you will be in the selection for Unicode or LaTex. we suggest selecting unicode.  Set this as the default.
