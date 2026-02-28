@@ -6,10 +6,10 @@ People who use screen readers can create mathematical  expressions by using line
 
 Most global Word Options apply to all new documents you create.
 When you change settings in File > Options, you’re typically adjusting application‑wide preferences. These include things like:
- • Proofing settings (AutoCorrect, spelling/grammar options)
- • Save settings (default file format, AutoRecover intervals)
- • Display settings
- • Advanced editing behavior
+ * Proofing settings (AutoCorrect, spelling/grammar options)
+ * Save settings (default file format, AutoRecover intervals)
+ * Display settings
+  Advanced editing behavior
  • Accessibility options
 These are stored in your user profile (usually in the Windows registry and/or the Normal template, depending on the setting).
 
@@ -17,41 +17,46 @@ We will be  making changes in the options and in the Word equation editor settin
 
 
 ## Enable Math AutoCorrect Everywhere 
-1.  Press Alt + F to open File.
-2. Press T for Options.
-3.  Arrow down to Proofing.
-4.  Tab to AutoCorrect Options and press Enter.
-5.  Shift + tab to get to the Math AutoCorrect tab.
+1. Open a Word document on your Windows device, then press ALT + F to open the File menu.
+2. Press T for Options then Press p  for Proofing.
+3.  Tab to AutoCorrect Options and press Enter.
+5.  Shift + tab several times and arrow over to get to the Math AutoCorrect tab.
 6.  There are many options. The ones you want to check are: 
 * Check - Use Math AutoCorrect rules outside of math regions.
 * Check -Replace text as you type.
 This makes typing math much faster and avoids hunting through menus. If this interferes with your screen reader, you can leave it unchecked.
 
-NOTE: You must press OK, which can be found at the end of the settings. You can also move to the main list of options and shift + tab to quickly reach the OK button. You must press the OK button when exiting the options to save them.
+Tab to OK to apply the settings.
 
 ##  Structural navigation for reading math in context 
 
-1.  Press Alt + F to open File.
-2. Press T for Options.
-3.  Arrow down toAdvanced.
-4. Tab into advanced and find Show document content:
-*Check - Show bookmarks
+1. Open a Word document on your Windows device, then press ALT + F to open the File menu.
+2. Press T for Options. then press "a" twice to advanced.
+3. Press tab into editing options.
+4. Tab Show document content:
+*uncheck - Show bookmarks
 * Uncheck - Show field codes instead of their values. (Field codes interfere with math reading)
-5.	Under Editing options:
 * check - Use smart cut and paste
-These don’t change math itself, but they prevent Word from collapsing math into unreadable blobs.
+Tab to OK to apply the settings.
 
-## Disable visual-only math features that confuse screen readers
+## Enable feedback with sound and more logical navigation
+1. Open a Word document on your Windows device, then press ALT + F to open the File menu.
+2. Press T to open Options, and then press A for Accessibility options.
+3. Tab to provide feedback with sound press the space bar to enable this.
+4select modern
+Most people prefer the modern sound scheme over the classic.
+You will be able to hear a sound when entering and exiting an equation.
+5. Press the Tab key until you get to the Use reading order for arrow key navigation check box, and then press Space to select it.  
+This provides a better experience when arrowing up and down in a word document.
+6. Tab to the OK button, and then press Enter to apply the change.
 
-While in the Word options enter the Display:
-• uncheck- Show text wrapped within the document window
-•uncheck - Show animations in the document
-This reduces cursor jumps when a screen reader is tracking math expressions.
+
+
 
 ## Equation editing options
 
 In the main body of the blank Word document, type alt + "=" (Alt plus the equal symbol.).
-This places you inside the Word equation editing field. Type \sqrt 4 = 2.
+This places you inside the Word equation editing field. Type \sqrt 4 = 2. Notice that \sqrt becomes the square root symbol.
 
 Now press alt and you will be taken to the equation tab. Press down arrow  and you will be in the options.
 Right arrow and you will be in the selection for Unicode or LaTex. we suggest selecting unicode.  Set this as the default.
