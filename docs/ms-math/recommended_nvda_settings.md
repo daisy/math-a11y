@@ -1,4 +1,6 @@
-For the Equations in Microsoft Word , please use
+# MathCAT settings in NVDA
+
+For  excellent results in reading and writing math, please use
 the following NVDA and MathCAT settings if possible.
 
 For NVDA prior to 2026.1, to work with digital math content, it needs to have an add-on
@@ -15,13 +17,8 @@ screen readers, please use the following:
 
 # NVDA Settings
 
-## Choosing your Voice Synthesizer:
-
-There are usually at least three choices: eSpeak NG, Microsoft Speech
-API, and Windows OneCore voices. All synthesizers work.
-
 # Installing MathCAT Add-on:
-Note: This step is not needed if using NVDA 2026.1 , because MathCAT is included in the core of NVDA.or later. 
+Note: This step is not needed if using NVDA 2026.1  or later, because MathCAT is included in the core of NVDA.
 1.   Open NVDA settings with NVDA key + n and arrow down to the  Tools menu and press enter.
 2. Arrow don to the Ad-on store and press enter.
   3. Press shift  tab until you get to the installed Add-ons and arrow over to the Available Add-ons.
@@ -70,6 +67,11 @@ Navigation settings:
 | Speech for chemical equations | Off (H sub 2 O)        |
 
 ## Navigation Category Settings:
+
+Note: With NVDA 20.1 and later, there is a new check box setting:
+Use native math speech in Word and Outlook 
+
+This will toggle between using MathCAT or the native Word and Outlook type of speech.  It is a personal preference.
 
 | Setting | Set to |
 |----|----|
