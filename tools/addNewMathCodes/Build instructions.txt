@@ -1,3 +1,4 @@
+# PowerShell Version
 The PowerShell script has no external dependencies. It can be run in Windows Powershell using the command:
 .\addmathcodes.ps1
 
@@ -6,3 +7,20 @@ Step 1: grab the PS2EXE utility (only need to do this once)
 Install-Module -Name PS2EXE -Scope CurrentUser
 Step 2: build the exe using the filename of the script and the filename of the desired executable
 ps2exe addmathcodes.ps1 addmathcodes.exe -noConsole
+
+# Python Version
+The Python version is a modern, cross-platform replacement using Tkinter and pywin32.
+
+To run it:
+1. Install pywin32 (if not already installed):
+   pip install pywin32
+2. Run the script:
+   python addmathcodes.py
+
+To bundle it into a standalone executable (without a console window):
+1. Install PyInstaller:
+   pip install pyinstaller
+2. Build the executable:
+   pyinstaller --noconsole --onefile addmathcodes.py
+   
+The built executable will be located in the `dist/` directory.
